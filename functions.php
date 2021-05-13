@@ -50,14 +50,16 @@ require_once(get_template_directory().'/assets/functions/blocks.php');
 
 //$publications = get_field('enable_publications', 'option');
 
-require_once(get_template_directory().'/assets/functions/priority-cpt.php');
+require_once(get_template_directory().'/assets/functions/projects-cpt.php');
 
 require_once(get_template_directory().'/assets/functions/publications-cpt.php');
+
+require_once(get_template_directory().'/assets/functions/workshops-cpt.php');
 
 function include_cpt_search( $query ) {
 
     if ( $query->is_search && !is_admin() ) { // added !is_admin() so admin filters don't break
-		$query->set( 'post_type', array( 'post', 'page', 'workstreams', 'library' ) );
+		$query->set( 'post_type', array( 'post', 'page', 'projects', 'publications', 'workshops' ) );
     }
 
     return $query;

@@ -4,21 +4,21 @@
  * Activities CPT for general support activities
  */
 
-function ac_base_workstreams() {
+function ac_base_projects() {
   // creating (registering) the custom type
-  register_post_type( 'workstreams', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
+  register_post_type( 'projects', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
     // let's now add all the options for this post type
     array('labels' => array(
-      'name' => __('Workstreams', 'ac_base'), /* This is the Title of the Group */
-      'singular_name' => __('Workstream', 'ac_base'), /* This is the individual type */
-      'all_items' => __('All Workstreams', 'ac_base'), /* the all items menu item */
-      'add_new' => __('Add New Workstream', 'ac_base'), /* The add new menu item */
-      'add_new_item' => __('Add New Workstream', 'ac_base'), /* Add New Display Title */
+      'name' => __('Projects', 'ac_base'), /* This is the Title of the Group */
+      'singular_name' => __('Project', 'ac_base'), /* This is the individual type */
+      'all_items' => __('All Projects', 'ac_base'), /* the all items menu item */
+      'add_new' => __('Add New Project', 'ac_base'), /* The add new menu item */
+      'add_new_item' => __('Add New Project', 'ac_base'), /* Add New Display Title */
       'edit' => __( 'Edit', 'ac_base' ), /* Edit Dialog */
-      'edit_item' => __('Edit Workstream', 'ac_base'), /* Edit Display Title */
-      'new_item' => __('New Workstream', 'ac_base'), /* New Display Title */
-      'view_item' => __('View Workstream', 'ac_base'), /* View Display Title */
-      'search_items' => __('Search Workstreams', 'ac_base'), /* Search Custom Type Title */
+      'edit_item' => __('Edit Project', 'ac_base'), /* Edit Display Title */
+      'new_item' => __('New Project', 'ac_base'), /* New Display Title */
+      'view_item' => __('View Project', 'ac_base'), /* View Display Title */
+      'search_items' => __('Search Projects', 'ac_base'), /* Search Custom Type Title */
       'not_found' =>  __('Nothing found in the Database.', 'ac_base'), /* This displays if there are no entries yet */
       'not_found_in_trash' => __('Nothing found in Trash', 'ac_base'), /* This displays if there is nothing in the trash */
       'parent_item_colon' => ''
@@ -43,4 +43,4 @@ function ac_base_workstreams() {
 
 }
 
-add_action( 'init', 'ac_base_workstreams');
+add_action( 'init', 'ac_base_projects');
