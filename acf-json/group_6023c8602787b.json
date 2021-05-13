@@ -1,0 +1,144 @@
+{
+    "key": "group_6023c8602787b",
+    "title": "Workstream details",
+    "fields": [
+        {
+            "key": "field_60892bbe1c80a",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<div style=\"background: whitesmoke;  padding: 1rem; font-size: 1.15rem;\">Please add a short description of 20 to 25 words in the <strong>Excerpt<\/strong> field at the bottom of the page. This will be shown on the <strong>Our work<\/strong> page. \r\n\r\nYou should also set a <strong>Featured image<\/strong> (see right-hand column) to be shown alongside the excerpt<\/div>",
+            "new_lines": "br",
+            "esc_html": 0
+        },
+        {
+            "key": "field_6023c869a3537",
+            "label": "Staff",
+            "name": "workstream_staff",
+            "type": "user",
+            "instructions": "Select the people who will be working on this workstream.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "role": "",
+            "allow_null": 1,
+            "multiple": 1,
+            "return_format": "array"
+        },
+        {
+            "key": "field_608929f195079",
+            "label": "Upload files",
+            "name": "workstream_files",
+            "type": "repeater",
+            "instructions": "Add any related document files here. These will be listed below the items with links to download.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add file",
+            "sub_fields": [
+                {
+                    "key": "field_608929f19507a",
+                    "label": "File title",
+                    "name": "file_title",
+                    "type": "text",
+                    "instructions": "This title will be shown in the link to the file.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_608929f19507b",
+                    "label": "Selected file",
+                    "name": "file_selected",
+                    "type": "file",
+                    "instructions": "Uploaded your chosen file(s).",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": 100,
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_608929f19507c",
+                    "label": "File Type",
+                    "name": "file_type",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "jpg": "JPG",
+                        "pdf": "PDF",
+                        "png": "PNG",
+                        "ppt": "PowerPoint",
+                        "word": "Word",
+                        "zip": "Zip"
+                    },
+                    "allow_null": 1,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "workstreams"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1619602917
+}

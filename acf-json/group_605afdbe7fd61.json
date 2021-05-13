@@ -1,0 +1,60 @@
+{
+    "key": "group_605afdbe7fd61",
+    "title": "Workstreams grid",
+    "fields": [
+        {
+            "key": "field_608a97976fbee",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<div style=\"background: whitesmoke;  padding: 1rem; font-size: 1.15rem;\">This shows a list of all <strong>Workstreams<\/strong> is a grid layout. You can update the heading for this block below. To update the images or excerpts being used, please edit the corresponding individual workstream.<\/div>",
+            "new_lines": "br",
+            "esc_html": 0
+        },
+        {
+            "key": "field_605afdbe9ca00",
+            "label": "Section heading",
+            "name": "workstream_section_title",
+            "type": "text",
+            "instructions": "Add an optional heading for the list of workstreams.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Workstreams",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/workstreams-list"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1619695726
+}

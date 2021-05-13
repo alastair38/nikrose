@@ -1,0 +1,89 @@
+{
+    "key": "group_5fb170fc1c2b7",
+    "title": "Related content",
+    "fields": [
+        {
+            "key": "field_5fb1710524720",
+            "label": "Section heading",
+            "name": "section_title",
+            "type": "text",
+            "instructions": "Add a heading for this block. The default is 'More reading'. <strong>This heading cannot be empty<\/strong>",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "More reading",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5fb173b641c86",
+            "label": "Links",
+            "name": "links",
+            "type": "repeater",
+            "instructions": "Select related pages, news or library items to show.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add link",
+            "sub_fields": [
+                {
+                    "key": "field_5fb1714088234",
+                    "label": "Link to display",
+                    "name": "related_link",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "post",
+                        "page",
+                        "workstreams",
+                        "library"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/related-info"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1619713389
+}

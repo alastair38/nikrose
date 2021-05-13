@@ -1,0 +1,158 @@
+{
+    "key": "group_6059c8e14fb80",
+    "title": "Connect with us",
+    "fields": [
+        {
+            "key": "field_6089205cbde28",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<div style=\"background: whitesmoke;  padding: 1rem; font-size: 1.15rem;\">Everything added here will be shown in the website footer.<\/div>",
+            "new_lines": "br",
+            "esc_html": 0
+        },
+        {
+            "key": "field_6059c8e15eeee",
+            "label": "Title text",
+            "name": "social_call_to_action",
+            "type": "text",
+            "instructions": "This shows at the top of the block containing the contact\/connect links.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5cebb2053e1b3",
+            "label": "Contact Page",
+            "name": "contact_page",
+            "type": "page_link",
+            "instructions": "This sets the 'contact us' link in the website footer.  If a page is not selected, the link won't show.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 1,
+            "allow_archives": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_6059c8e16293e",
+            "label": "Twitter Link",
+            "name": "social_cta_link",
+            "type": "url",
+            "instructions": "Add the URL of the Twitter profile you wish to link to",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_6059c8e166348",
+            "label": "Twitter Link Text",
+            "name": "social_cta_link_text",
+            "type": "text",
+            "instructions": "The text that will be linked to your Twitter profile.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Follow us on Twitter",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_605e0cc66e977",
+            "label": "Newsletter Sign Up",
+            "name": "newsletter_cta_link",
+            "type": "url",
+            "instructions": "Add the URL of the newletter sign-up page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_605e0ce36e978",
+            "label": "Newsletter Link Text",
+            "name": "newsletter_cta_link_text",
+            "type": "text",
+            "instructions": "The text that will be linked to your newsletter sign up page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Sign up for our newsletter",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/social-call-to-action"
+            }
+        ],
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1619723318
+}

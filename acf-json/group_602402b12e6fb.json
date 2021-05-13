@@ -1,0 +1,242 @@
+{
+    "key": "group_602402b12e6fb",
+    "title": "Item details",
+    "fields": [
+        {
+            "key": "field_6024f4b74a7b7",
+            "label": "Assign to a workstream",
+            "name": "workstream_outputs",
+            "type": "post_object",
+            "instructions": "This is optional and will add a link to the associated workstream.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "workstreams"
+            ],
+            "taxonomy": "",
+            "allow_null": 1,
+            "multiple": 1,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_602402bbf9806",
+            "label": "Featured",
+            "name": "featured_output",
+            "type": "button_group",
+            "instructions": "Select 'Yes' to show this item on the website home page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "Yes",
+                "0": "No"
+            },
+            "allow_null": 0,
+            "default_value": 0,
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_6089282e44056",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<div style=\"background: whitesmoke;  padding: 1rem; font-size: 1.15rem;\">If you are setting a item to be featured, please add a short description of 20 to 25 words in the <strong>Excerpt<\/strong> field at the bottom of the page. This will be shown on the home page. \r\n\r\nYou can also set a <strong>Featured image<\/strong> (see right-hand column) to be shown on the home page. If this is not set, a default image will be displayed.<\/div>",
+            "new_lines": "br",
+            "esc_html": 0
+        },
+        {
+            "key": "field_605a071fbcbc2",
+            "label": "Source link",
+            "name": "primary_link",
+            "type": "url",
+            "instructions": "If this output is pointing to an external source (eg: blog post, video), add the URL here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_605a072cbcbc3",
+            "label": "Supplementary links",
+            "name": "additional_links",
+            "type": "repeater",
+            "instructions": "Add supplementary or reference links here. These will be listed below the items.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add link",
+            "sub_fields": [
+                {
+                    "key": "field_605a073abcbc4",
+                    "label": "Url",
+                    "name": "secondary_link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_605a08bb795de",
+                    "label": "Link text",
+                    "name": "secondary_link_text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5fb16459f4866",
+            "label": "Upload files",
+            "name": "files",
+            "type": "repeater",
+            "instructions": "Add any related document files here. These will be listed below the items with links to download.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add file",
+            "sub_fields": [
+                {
+                    "key": "field_5fb1646bf4867",
+                    "label": "File title",
+                    "name": "file_title",
+                    "type": "text",
+                    "instructions": "This title will be shown in the link to the file.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5fb16485f4868",
+                    "label": "Selected file",
+                    "name": "file_selected",
+                    "type": "file",
+                    "instructions": "Uploaded your chosen file(s).",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": 100,
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_6059fb37c6038",
+                    "label": "File Type",
+                    "name": "file_type",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "jpg": "JPG",
+                        "pdf": "PDF",
+                        "png": "PNG",
+                        "ppt": "PowerPoint",
+                        "word": "Word",
+                        "zip": "Zip"
+                    },
+                    "allow_null": 1,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "library"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1619602956
+}

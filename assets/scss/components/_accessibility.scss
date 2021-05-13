@@ -1,0 +1,93 @@
+html {
+  //scroll-behavior: smooth;
+}
+
+/* Skip link */
+
+#skip_lnk {
+  position: absolute;
+  padding: .5rem 1rem;
+  color: $neutral-light;
+  background-color: $accent-color;
+  text-decoration: none;
+  border-radius: 3px;
+  border: 2px solid transparent;
+  z-index: 10;
+  transform: translate3d(.125rem, -5rem, 0);
+  transition: transform .3s ease-out;
+}
+#skip_lnk:focus {
+  transform: translate3d(.125rem, 3.5rem, 0);
+  border: 2px solid $neutral-light;
+  outline: none;
+}
+@media print {
+  .skip_lnk {
+    display: none;
+  }
+}
+
+//Theme switcher
+#switcher {
+  .button [type="checkbox"] + span::before {
+    content: 'off';
+  }
+
+  .button [type="checkbox"]:checked + span::before {
+    content: 'on';
+  }
+}
+
+#access-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#access-top, #access-bottom, #access-toolbar, #access-mob {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  label {
+    color: white;
+  }
+  .material-icons {
+    line-height: 36px;
+    &.right {
+      margin-left: 0.25rem;
+    }
+  }
+
+  .btn-flat {
+    border:1px solid transparent !important;
+  }
+  .btn-flat:focus, .btn-flat:hover {
+    background: transparent !important;
+    color: $link-color;
+    //border: 1px solid black !important;
+  }
+  [aria-pressed]:after {
+    background: #000;
+    color: white;
+    padding: 0 3px;
+    margin: 0 5px;
+    border-radius: 2px;
+  }
+  [aria-pressed="true"]:after {
+  content: 'on';
+}
+[aria-pressed="false"]:after {
+  content: 'off';
+}
+}
+
+// screen reader only utility + hide recaptcha box
+.sr-only, .g-recaptcha {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
