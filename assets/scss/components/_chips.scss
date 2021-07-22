@@ -36,13 +36,14 @@
 
 .chip.tag {
   background: $accent-color;
-  color: $neutral-light;
+  color: $neutral-dark;
   border: 1px solid $accent-color;
   text-transform: uppercase;
   text-decoration: none;
   &:hover, &:focus {
     background: transparent;
-    color: $accent-color;
+    color: $neutral-dark;
+    border: 1px solid $neutral-dark;
     text-decoration: none;
   }
 }

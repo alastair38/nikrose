@@ -25,15 +25,15 @@ function ac_base_projects() {
       ), /* end of arrays */
       'public' => true,
       'publicly_queryable' => true,
-      'exclude_from_search' => true,
+      'exclude_from_search' => false,
       'show_ui' => true,
       'query_var' => true,
       'show_in_admin_bar' => true,
       'menu_position' => 4, /* this is what order you want it to appear in on the left hand side menu */
       'menu_icon' => 'dashicons-clipboard', /* the icon for the custom post type menu */
-      'has_archive' => false, /* you can rename the slug here */
-      'rewrite'     => ['slug' => 'our-work'],
-      'with_front' => false,
+      'has_archive' => true, /* you can rename the slug here */
+      'rewrite'     => ['slug' => 'projects'],
+      'with_front' => true,
       'capability_type' => 'page',
       'hierarchical' => false,
       /* the next one is important, it tells what's enabled in the post editor */

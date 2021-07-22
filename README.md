@@ -1,4 +1,4 @@
-## AC Base ##
+## David Reubi Base ##
 
 Clean base for WP theme development
 

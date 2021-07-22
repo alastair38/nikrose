@@ -26,7 +26,7 @@ if( !empty($block['align']) ) {
 
 $args = array(
   'numberposts' => -1,
-  'post_type' => 'workstreams',
+  'post_type' => 'post',
   'order'          => 'ASC',
   'orderby'        => 'title'
 );
@@ -34,7 +34,7 @@ $args = array(
 $workstream_title = get_field('workstream_section_title');
 $latest_posts = get_posts( $args );
 
-echo '<div id="' . $id . '" class="block workstreams">';
+echo '<div id="' . $id . '" class="block workstreams"><div class="container">';
 
 if($workstream_title):
 echo '<h2 class="h4">' . $workstream_title . '</h2>';
@@ -63,7 +63,7 @@ foreach($latest_posts as $post) {
     }?>
 
     <div class="feat-content">
-      <h3 class="thin"><a href="<?php the_permalink($post->ID) ?>" rel="bookmark"><?php echo $title; ?></a></h3>
+      <h3><a href="<?php the_permalink($post->ID) ?>" rel="bookmark"><?php echo $title; ?></a></h3>
       <?php if($excerpt){?>
         <span><?php echo $excerpt; ?></span>
       <?php } ?>
@@ -73,7 +73,7 @@ foreach($latest_posts as $post) {
   </article>
 <?php }
 
-echo '</div>';
+echo '</div></div>';
 
 wp_reset_postdata();
 ?>

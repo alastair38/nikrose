@@ -26,6 +26,8 @@ if( !empty($block['align']) ) {
 
 // Load values and assing defaults.
 $statement = get_field('statement_header');
+$byline = get_field('statement_byline');
+$byline = explode(" ", $byline);
 $bg_image = get_field('statement_background');
 ?>
 
@@ -35,8 +37,14 @@ $bg_image = get_field('statement_background');
 <?php }?>>
 
 <?php if($statement){?>
-  <div>
-      <h1 class="h3"><?php echo $statement;?></h1>
+  <div class="heading-wrapper">
+      <h1 class="display-type"><?php echo $statement;?></h1>
+      <ul class="statement-byline">
+        <?php foreach($byline as $word) {
+        echo '<li>' . $word . '</li>';
+        } ?>
+      </ul>
   </div>
 <?php }?>
+  
 </div>

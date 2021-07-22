@@ -40,7 +40,7 @@ function site_scripts() {
     wp_enqueue_style( 'icons-style', 'https://fonts.googleapis.com/icon?family=Material+Icons', array(), '', 'all' );
 
     // Register main stylesheet
-    wp_enqueue_style( 'fonts-style', 'https://fonts.googleapis.com/css?family=Roboto&display=swap', array(), '', 'all' );
+    wp_enqueue_style( 'fonts-style', 'https://fonts.googleapis.com/css?family=Lato:100,300,400|Gruppo&display=swap', array(), '', 'all' );
 
     // wp_enqueue_style( 'slick-style', 'https:////cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), '', 'all' );
 

@@ -1,21 +1,25 @@
 .feat {
-  border: 1px solid color("grey", "lighten-2");
+  border: 1px solid color('grey', 'lighten-2');
   border-radius: 3px;
   line-height: 0;
   //padding: .25rem;
   background: $neutral-light;
   margin-bottom: 1rem;
-  a:hover, a:focus {
+  a {
+    text-decoration: none;
+  }
+  a:hover,
+  a:focus {
     color: $link-hover-color;
   }
   @media #{$medium-and-up} {
     margin-bottom: 0;
   }
-  h2, h3 {
+  h2,
+  h3 {
     font-size: $h6-fontsize;
 
     padding-bottom: 0.25rem;
-    height: 3rem;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -25,6 +29,7 @@
     width: 100%;
     height: 175px;
     object-fit: cover;
+    aspect-ratio: 4/3;
   }
   .feat-content {
     line-height: 1.5;
@@ -42,23 +47,25 @@
   }
 }
 
-.feat-pages .feat h2, .feat-pages .feat h3 {
+.feat-pages .feat h2,
+.feat-pages .feat h3 {
   align-items: center;
 }
 
-.workstreams .feat h2, .workstreams .feat h3 {
+.workstreams .feat h2,
+.workstreams .feat h3 {
   align-items: flex-start;
 }
 
 .profile {
-  h2, h3 {
+  h2,
+  h3 {
     margin-top: 0;
   }
   margin-bottom: 3rem;
 
-  border-bottom: 1px solid color("grey", "lighten-2");
+  border-bottom: 1px solid color('grey', 'lighten-2');
   .content {
-
     &.col.s12 {
       padding-left: 2rem;
       @media #{$small-and-down} {
@@ -72,14 +79,15 @@
       }
     }
     a {
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         color: $link-hover-color;
       }
     }
   }
 }
 
-[id*="profile-block"] {
+[id*='profile-block'] {
   &:first-of-type {
     padding-top: 1rem;
   }
@@ -93,56 +101,56 @@
 }
 
 ul.team-list {
-    list-style-type: none;
-    padding-left: 0;
-    padding-bottom: 1rem;
-    display: flex;
-    @media #{$medium-and-down} {
+  list-style-type: none;
+  padding-left: 0;
+  padding-bottom: 1rem;
+  display: flex;
+  @media #{$medium-and-down} {
     overflow: scroll;
-    }
+  }
 
-    li {
-      &:not(:first-child) {
-        margin-left: 1.75rem;
-      }
-      img {
-        border-radius: 3px 3px 0 0;
-        transition: 350ms;
-        object-fit: cover;
-      }
-      a {
-        display: flex;
-        flex-direction:column;
-        max-width: fit-content;
-        align-items: center;
-        width: 100%;
-        background: white;
-        border-radius: 3px;
-        border: 1px solid color('grey', 'lighten-2');
-        transition: 350ms;
-        text-decoration: none;
-        &:hover, &:focus {
-          img {
-            filter: grayscale(70%);
-          }
-          .member-name {
-            color: $link-hover-color;
-          }
+  li {
+    &:not(:first-child) {
+      margin-left: 1.75rem;
+    }
+    img {
+      border-radius: 3px 3px 0 0;
+      transition: 350ms;
+      object-fit: cover;
+    }
+    a {
+      display: flex;
+      flex-direction: column;
+      max-width: fit-content;
+      align-items: center;
+      width: 100%;
+      background: white;
+      border-radius: 3px;
+      border: 1px solid color('grey', 'lighten-2');
+      transition: 350ms;
+      text-decoration: none;
+      &:hover,
+      &:focus {
+        img {
+          filter: grayscale(70%);
         }
-        span.member-name {
-          padding: 0.25rem;
+        .member-name {
+          color: $link-hover-color;
         }
+      }
+      span.member-name {
+        padding: 0.25rem;
       }
     }
+  }
 }
-
 
 ul.grid-gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 2rem;
   padding-bottom: 1rem;
-  border: 1px solid color("grey", "lighten-2");
+  border: 1px solid color('grey', 'lighten-2');
   border-radius: 3px;
   li {
     display: flex;
@@ -161,11 +169,15 @@ ul.grid-gallery {
     justify-content: center;
   }
   .title {
-    color: color("grey", "base");
+    color: color('grey', 'base');
   }
   img {
     border-radius: 3px;
   }
+}
+
+.news-items {
+  margin-top: 2rem;
 }
 
 .blog-card {
@@ -174,54 +186,55 @@ ul.grid-gallery {
   background: $neutral-light;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  border: 1px solid color("grey", "lighten-2");
+  border: 1px solid color('grey', 'lighten-2');
   margin-bottom: 2rem;
   border-radius: 3px;
   padding: 0rem;
-  &:last-child {
 
-  }
   @media #{$medium-and-up} {
     grid-template-columns: 150px 1fr;
     grid-template-rows: 150px;
   }
-  h2, h3 {
+  h2,
+  h3 {
     font-size: 1.25rem;
     margin: 1rem 0;
   }
   img {
+    display: flex;
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     @media #{$medium-and-up} {
-    border-radius: 3px 0 0 3px;
+      border-radius: 3px 0 0 3px;
     }
   }
   a {
-    text-decoration: underline;
-    text-decoration-color: transparent;
+    position: relative;
     transition: 350ms;
-    &:hover, &:focus {
-      text-decoration-color: currentColor;
-      transition: 350ms;
+    z-index: 10;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: $link-hover-color;
     }
   }
   .card-content {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  justify-content: center;
-  position: relative;
-  @media #{$medium-and-up} {
-    padding: 0 2rem;
-  }
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: center;
+    position: relative;
+    @media #{$medium-and-up} {
+      padding: 0 2rem;
+    }
     span.date {
       position: absolute;
       bottom: 1rem;
       font-size: 0.8rem;
-      color: color("grey", "darken-3");
+      color: color('grey', 'darken-3');
       @media #{$medium-and-up} {
-        bottom: -.5rem;
+        bottom: -0.5rem;
       }
     }
     span.new {
@@ -232,53 +245,52 @@ ul.grid-gallery {
       font-size: 12px;
       border-radius: 3px;
     }
-
+  }
 }
-}
-
 
 .library-card {
-    border: 1px solid #e0e0e0;
-    margin-bottom: 2rem;
-    border-radius: 3px;
-    .card-content {
-      display: grid;
-      grid-template-columns: 1fr;
-      @media #{$medium-and-up} {
+  border: 1px solid #e0e0e0;
+  margin-bottom: 2rem;
+  border-radius: 3px;
+  .card-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    @media #{$medium-and-up} {
       grid-template-columns: 1fr 2fr;
     }
+  }
+  .card-title {
+    background: color('grey', 'lighten-4');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    h3 {
+      margin: 0;
     }
-    .card-title {
-      background: color('grey', 'lighten-4');
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 1rem;
-      h3 {
-        margin: 0;
-      }
-      a:hover, a:focus {
-        color: $link-hover-color;
-      }
-      .date {
-        font-size: 0.8rem;
-        font-style: italic;
-        padding-top: 0.25rem;
-      }
+    a:hover,
+    a:focus {
+      color: $link-hover-color;
     }
-    p {
-      display: flex;
-      align-items: center;
-      padding: 1rem;
+    .date {
+      font-size: 0.8rem;
+      font-style: italic;
+      padding-top: 0.25rem;
     }
+  }
+  p {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+  }
 }
 
 .article-list {
-  font-size: 1rem;
+  font-size: 0.9rem;
   position: relative;
-  padding: 2rem;
-  background: color("grey", "lighten-4");
-  margin: 0 0 3rem 0;
+  padding: 1rem;
+  background: color('grey', 'lighten-5');
+  margin: 0 0 2rem 0;
   .article-footer {
     display: flex;
     align-items: center;
@@ -288,13 +300,14 @@ ul.grid-gallery {
     display: inline-flex;
     background: $accent-color;
     color: $neutral-light;
-    padding: 0 .5rem;
+    padding: 0 0.5rem;
     border-radius: 30px;
     font-size: 0.85rem;
     margin-bottom: 0;
   }
-  h2, h3 {
-    font-size: 1.5rem;
+  h2,
+  h3 {
+    font-size: 1.25rem;
     font-weight: normal;
     margin: 0.25rem 0;
   }
@@ -308,47 +321,39 @@ ul.grid-gallery {
   }
 
   a {
-      display: flex;
-      align-items: center;
-
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: 350ms;
+    &:hover,
+    &:focus {
+      color: $link-hover-color;
       transition: 350ms;
-      &:hover, &:focus {
-        color: $link-hover-color;
-        transition: 350ms;
     }
     i {
       font-size: 16px;
       background: $neutral-light;
       color: $accent-color;
-      padding: .25rem;
+      padding: 0.25rem;
       border-radius: 50%;
-      margin-left: .5rem;
+      margin-left: 0.5rem;
     }
   }
   &:after {
     content: '';
-    background: color("grey", "lighten-2");;
+    background: $accent-color;
     position: absolute;
     height: 1px;
-    bottom: -.5rem;
+    bottom: -0.5rem;
     left: 40%;
     right: 0%;
-  }
-  &:before {
-    content: '';
-    background: #dedede;
-    position: absolute;
-    height: 1px;
-    top: -.5rem;
-    left: 0%;
-    right: 40%;
   }
 }
 
 .related-info-block {
   margin: 5rem 0;
   padding: 2rem 3rem;
-  background: color("grey", "lighten-4");
+  background: color('grey', 'lighten-4');
   border-radius: 3px;
   h2 {
     margin: 0;
@@ -358,64 +363,70 @@ ul.grid-gallery {
     font-weight: normal;
     margin: 0;
   }
-.related-info {
-  font-size: 1rem;
-  position: relative;
-  margin: 1.5rem 0 0 0;
-  display: flex;
-  align-items: center;
-  img {
-    margin-right: 1rem;
-    max-width: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    aspect-ratio: 1 / 1;
-  }
-  a {
+  .related-info {
+    font-size: 1rem;
+    position: relative;
+    margin: 1.5rem 0 0 0;
+    display: flex;
+    align-items: center;
+    img {
+      margin-right: 1rem;
+      max-width: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+    }
+    a {
       text-decoration: underline;
       text-decoration-color: transparent;
       transition: 350ms;
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         text-decoration-color: currentColor;
         transition: 350ms;
+      }
     }
   }
 }
-}
 
-.resources-list, .pubs-list {
+.resources-list,
+.pubs-list {
   list-style-type: none;
   font-size: 1rem;
   position: relative;
   padding: 2rem;
-  background: color("grey", "lighten-4");
+  background: color('grey', 'lighten-4');
   margin: 1rem 0 0 0;
-  h2, h3 {
+  h2,
+  h3 {
     font-size: 1rem;
     font-weight: normal;
     margin: 0.25rem 0;
   }
-span {
-  margin-bottom: 0;
-  margin-left: 5px;
-  text-transform: uppercase;
-  color: color("grey", "darken-4");
-}
+  li.resource-item {
+    padding: 0.5rem 0;
+  }
+  span {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: color('grey', 'darken-4');
+  }
 
   a {
-      text-decoration: underline;
-      text-decoration-color: transparent;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: 350ms;
+    margin-right: 5px;
+    &:hover,
+    &:focus {
+      text-decoration-color: currentColor;
       transition: 350ms;
-      &:hover, &:focus {
-        text-decoration-color: currentColor;
-        transition: 350ms;
     }
   }
 }
 
-
 .card-panel {
-  transition: box-shadow .25s;
+  transition: box-shadow 0.25s;
   padding: $card-padding;
   margin: $element-top-margin 0 $element-bottom-margin 0;
   border-radius: 2px;
@@ -427,10 +438,9 @@ span {
   position: relative;
   margin: $element-top-margin 0 $element-bottom-margin 0;
   background-color: $card-bg-color;
-  transition: box-shadow .25s;
+  transition: box-shadow 0.25s;
   border-radius: 2px;
   @extend .z-depth-1;
-
 
   .card-title {
     font-size: 24px;
@@ -441,7 +451,9 @@ span {
   }
 
   // Card Sizes
-  &.small, &.medium, &.large {
+  &.small,
+  &.medium,
+  &.large {
     position: relative;
 
     .card-image {
@@ -477,7 +489,9 @@ span {
 
   // Horizontal Cards
   &.horizontal {
-    &.small, &.medium, &.large {
+    &.small,
+    &.medium,
+    &.large {
       .card-image {
         height: 100%;
         max-height: none;
@@ -523,9 +537,6 @@ span {
       padding-bottom: 64px;
     }
   }
-
-
-
 
   .card-image {
     position: relative;
@@ -575,17 +586,19 @@ span {
       border-radius: 0 0 2px 2px;
     }
     background-color: inherit; // Use inherit to inherit color classes
-    border-top: 1px solid rgba(160,160,160,.2);
+    border-top: 1px solid rgba(160, 160, 160, 0.2);
     position: relative;
     padding: 16px $card-padding;
 
     a:not(.btn):not(.btn-large):not(.btn-floating) {
       color: $card-link-color;
       margin-right: $card-padding;
-      transition: color .3s ease;
+      transition: color 0.3s ease;
       text-transform: uppercase;
 
-      &:hover { color: $card-link-color-light; }
+      &:hover {
+        color: $card-link-color-light;
+      }
     }
   }
 

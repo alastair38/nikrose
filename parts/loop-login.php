@@ -35,9 +35,9 @@ if( !is_user_logged_in() ) {
 
 } else {
 	echo '<div id="admin-buttons" class="center"><h2 class="h5">Add content</h2>';
-	echo '<a class="btn-flat admin" href="' . admin_url() . 'post-new.php"><i aria-hidden="true" class="material-icons left">article</i>Add news</a>';
-	echo '<a class="btn-flat admin" href="' . admin_url() . 'post-new.php?post_type=workstreams"><i aria-hidden="true" class="material-icons left">alt_route</i>Add workstream</a>';
-	echo '<a class="btn-flat admin" href="' . admin_url() . 'post-new.php?post_type=library"><i aria-hidden="true" class="material-icons left">assignment</i>Add library item</a>';
+	echo '<a class="btn-flat admin" href="' . admin_url() . 'post-new.php"><i aria-hidden="true" class="material-icons left">article</i>Add project</a>';
+	echo '<a class="btn-flat admin" href="' . admin_url() . 'post-new.php?post_type=workshops"><i aria-hidden="true" class="material-icons left">alt_route</i>Add workshop</a>';
+	echo '<a class="btn-flat admin" href="' . admin_url() . 'post-new.php?post_type=publications"><i aria-hidden="true" class="material-icons left">assignment</i>Add publication</a>';
 	echo '<h2 class="h5">Admin</h2>';
 	if(current_user_can('administrator')) {
 	echo '<a class="btn-flat admin" href="' . admin_url() . '"><i aria-hidden="true" class="material-icons left">settings</i>Admin area</a>';

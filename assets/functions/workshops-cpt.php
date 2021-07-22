@@ -33,6 +33,7 @@ function pathway20_workshops() {
       'menu_icon' => 'dashicons-groups', /* the icon for the custom post type menu */
       'has_archive' => true, /* you can rename the slug here */
       'rewrite'     => ['slug' => 'workshops'],
+      'with_front' => false,
       'capability_type' => 'post',
       'hierarchical' => false,
       /* the next one is important, it tells what's enabled in the post editor */

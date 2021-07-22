@@ -9,18 +9,18 @@
 	if( $desc ): 
 		echo $desc;
 	 endif;
-	// $library_tags = get_the_terms( get_the_ID(), 'library_categories' );
-	// //print_R($library_tags);
-	// if($library_tags) {
-	// 	echo '<span class="library-tags">';
-	//
-	// 	foreach ($library_tags as $tag) {
-	// 		$tag_link = get_term_link( $tag );
-	// 		echo '<a href="' . $tag_link . '" class="chip tag">' . $tag->name . '</a>';
-	// 	}
-	//
-	// 	echo '</span>';
-	// }
+	$library_tags = get_the_terms( get_the_ID(), 'publications_categories' );
+	//print_R($library_tags);
+	if($library_tags) {
+		echo '<span class="library-tags">';
+	
+		foreach ($library_tags as $tag) {
+			$tag_link = get_term_link( $tag );
+			echo '<a href="' . $tag_link . '" class="chip tag">' . $tag->name . '</a>';
+		}
+	
+		echo '</span>';
+	}
 
 	?>
 	<?php

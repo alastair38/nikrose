@@ -47,10 +47,14 @@ if( have_rows('pages') ):
 
       echo '<div class="col s12 m' . $cols . '">
       <div class="feat">
-      <img src="' . $image['sizes']['card-thumbnail size'] . '" alt="' . $image_alt . '" />';
+      <img src="' . $image['sizes']['card-thumbnail size'] . '" height="175" width="275" alt="' . $image_alt . '" />';
 
-      echo '<h3 class="thin center upper"><a href="' . get_sub_field('feat_link') . '" rel="bookmark">' . get_sub_field('feat_title') . '</a></h3>
-      </div>
+      if($title) {
+      echo '<h3 class="center upper"><a href="' . get_sub_field('feat_link') . '" rel="bookmark">' . get_sub_field('feat_title') . '</a></h3>';
+      } else {
+        echo '<h2 class="center upper"><a href="' . get_sub_field('feat_link') . '" rel="bookmark">' . get_sub_field('feat_title') . '</a></h2>';
+      }
+      echo '</div>
       </div>';
 
     endwhile;

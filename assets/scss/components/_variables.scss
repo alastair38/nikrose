@@ -45,8 +45,8 @@ $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
 $link-color: #283c86 !default;
 $link-hover-color: $secondary-color !default;
-$accent-color: #aa3b34 !default;
-$accent-color-hover: #fdd2cf !default;
+$accent-color: #F2F071 !default;
+$accent-color-hover: #fcf836 !default;
 
 
 // 2. Badges
@@ -251,7 +251,7 @@ $navbar-height: 64px !default;
 $navbar-line-height: $navbar-height !default;
 $navbar-height-mobile: 56px !default;
 $navbar-line-height-mobile: $navbar-height-mobile !default;
-$navbar-font-size: 1.2rem !default;
+$navbar-font-size: 1rem !default;
 $navbar-font-color: #fff !default;
 $navbar-brand-font-size: 2.1rem !default;
 
@@ -308,8 +308,8 @@ $toast-action-color: #eeff41;
 // 20. Typography
 // ==========================================================================
 
-$font-stack: -apple-system, BlinkMacSystemFont, 'Roboto', "Helvetica Neue", sans-serif !default;
-$off-black: rgba(0, 0, 0, 0.87) !default;
+$font-stack: -apple-system, BlinkMacSystemFont, 'Lato', "Helvetica Neue", sans-serif !default;
+$off-black: color("grey", "darken-3") !default;
 // Header Styles
 $h1-fontsize: 2.92rem !default;
 $h2-fontsize: 1.64rem !default;

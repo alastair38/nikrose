@@ -33,12 +33,16 @@ $bg = get_field('background');
       <?php if($image):?>
 
         <div class="cta-image">
-          <img src="<?php echo $image['sizes']['card-thumbnail size'];?>" width="200px" alt="<?php echo $image_alt;?>" />
+          <img src="<?php echo $image['sizes']['card-thumbnail size'];?>" width="200px" height="200px" alt="<?php echo $image_alt;?>" />
         </div>
 
       <?php endif; ?>
 
+      <?php if($headerText):?>
+
       <h2 id="skip-target" class="cta-header-text h5 block"><?php echo $headerText;?></h2>
+
+      <?php endif;?>
 
       <p class="cta-text"><?php echo $cta;?></p>
 

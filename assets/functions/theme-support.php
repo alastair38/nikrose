@@ -72,6 +72,7 @@ add_action( 'wp_head', 'ac_base_meta_description');
 
 	// Add HTML5 Support
 	add_theme_support( 'html5',
+					[ 'script', 'style' ],
 	         array(
 	         	'comment-list',
 	         	'comment-form',
@@ -160,8 +161,8 @@ function accessible_thumbnail($class=null) {
 }
 
 function custom_post_archive($query) {
-    if (!is_admin() && is_tax('library_categories') && $query->is_tax)
-        $query->set( 'post_type', array('library') );
+    if (!is_admin() && is_tax('publications_categories') && $query->is_tax)
+        $query->set( 'post_type', array('publications') );
     remove_action( 'pre_get_posts', 'custom_post_archive' );
 }
 add_action('pre_get_posts', 'custom_post_archive');
@@ -181,7 +182,7 @@ function query_post_type($query) {
     if($post_type)
         $post_type = $post_type;
     else
-        $post_type = array('nav_menu_item', 'post', 'library'); // don't forget nav_menu_item to allow menus to work!
+        $post_type = array('nav_menu_item', 'post', 'publications'); // don't forget nav_menu_item to allow menus to work!
     $query->set('post_type',$post_type);
     return $query;
     }
@@ -191,7 +192,7 @@ add_filter( 'post_type_labels_post', 'change_post_labels' );
 
 function change_post_labels( $args ) {
         foreach( $args as $key => $label ){
-            $args->{$key} = str_replace( [ __( 'Posts' ), __( 'Post' ) ], __( 'News & Events' ), $label );
+            $args->{$key} = str_replace( [ __( 'Posts' ), __( 'Post' ) ], __( 'Archive' ), $label );
         }
 
         return $args;

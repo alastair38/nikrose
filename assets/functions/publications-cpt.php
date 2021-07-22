@@ -82,6 +82,6 @@ function create_publications_categories_taxonomy() {
     'show_admin_column' => true,
     'update_count_callback' => '_update_post_term_count',
     'query_var' => true,
-    'rewrite' => array( 'slug' => 'publications/publications-categories' ),
+    'rewrite' => array( 'slug' => 'publications/type' ),
   ));
 }

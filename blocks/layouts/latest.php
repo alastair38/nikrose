@@ -26,7 +26,6 @@ if( !empty($block['align']) ) {
 
 // Load values and assing defaults.
 $numberposts = get_field('number_of_items');
-$bg = get_field('background');
 
 $args = array(
   'numberposts' => $numberposts
@@ -34,8 +33,8 @@ $args = array(
 
 $latest_posts = get_posts( $args );
 
-echo '<div class="row block ' . $bg . ' lighten-4"><div class="container">';
-  echo '<h2 class="col s12 h4">Latest News</h2><div class="col s12">';
+echo '<div class="row block latest-news"><div class="container">';
+  echo '<h2 class="col s12 h5 center">Latest News</h2><div class="news-items col s12">';
 foreach($latest_posts as $post) {
   setup_postdata( $post );?>
   <article id="post-<?php the_ID(); ?>" class="blog-card">

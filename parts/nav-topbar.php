@@ -11,7 +11,7 @@
 	 ?>
 	 <a id=skip_lnk href="#skip-target">Skip to content</a>
 	 <nav aria-label="Main site navigation">
-	 	<div class="nav-wrapper ">
+	 	<div class="nav-wrapper">
 			<!-- <?php $logo_image = get_field( "site_logo", "option" );
 			if ($logo_image){?>
 			<img id="logo" class="brand-logo left" src="<?php echo $logo_image['sizes']['blog-thumbnail size'];?>" alt="<?php bloginfo('name'); ?> logo"/>
@@ -21,11 +21,11 @@
 			<?php }?> -->
 
 			<?php if ( is_front_page() ) :?>
-				<h1 class="brand-logo">
+				<h1 class="brand-logo display-type">
 					<a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
 				</h1>
 			<?php else : ?>
-				<span class="brand-logo">
+				<span class="brand-logo display-type">
 					<a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
 				</span>
 			<?php endif;?>
