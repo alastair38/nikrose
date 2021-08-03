@@ -33,12 +33,14 @@ function remove_plugin_image_sizes() {
 				$des_post = normalize_whitespace($des_post);
         echo '<meta name="description" content="' . $des_post . '" />' . "\n";
     }
-		if ( is_home() ) {
-				$desc = get_field("news_page_description", "options");
-				$desc_news = strip_tags($desc);
-				$des_news = normalize_whitespace($des_news);
-        echo '<meta name="description" content="' . $desc_news . '" />' . "\n";
-    }
+		
+		// if ( is_home() ) {
+		// 		$desc = get_field("news_page_description", "options");
+		// 		$desc_news = strip_tags($desc);
+		// 		$desc_news = normalize_whitespace($desc_news);
+    //     echo '<meta name="description" content="' . $desc_news . '" />' . "\n";
+    // }
+		
     if ( is_front_page() ) {
         echo '<meta name="description" content="' . get_bloginfo( "description" ) . '" />' . "\n";
     }
@@ -54,18 +56,25 @@ function remove_plugin_image_sizes() {
         echo '<meta name="description" content="' . $des_term . '" />' . "\n";
     }
 
-		if ( is_post_type_archive('library') ) {
-				$desc = get_field("library_page_description", "options");
-				$desc_lib = strip_tags($desc);
-				$des_lib = normalize_whitespace($des_lib);
-        echo '<meta name="description" content="' . $desc_lib . '" />' . "\n";
+		if ( is_post_type_archive('publications') ) {
+				$desc = get_field("publications_page_description", "options");
+				$desc_pubs = strip_tags($desc);
+				$desc_pubs = normalize_whitespace($desc_pubs);
+        echo '<meta name="description" content="' . $desc_pubs . '" />' . "\n";
     }
 
-		if ( is_post_type_archive('workstreams') ) {
-				$desc = get_field("workstreams_page_description", "options");
-				$desc_workstreams = strip_tags($desc);
-				$des_workstreams = normalize_whitespace($des_workstreams);
-        echo '<meta name="description" content="' . $desc_workstreams . '" />' . "\n";
+		if ( is_post_type_archive('projects') ) {
+			$desc = get_field("projects_page_description", "options");
+			$desc_projects = strip_tags($desc);
+			$desc_projects = normalize_whitespace($desc_projects);
+			echo '<meta name="description" content="' . $desc_projects . '" />' . "\n";
+		}
+
+		if ( is_post_type_archive('workshops') ) {
+				$desc = get_field("workshops_page_description", "options");
+				$desc_workshops = strip_tags($desc);
+				$desc_workshops = normalize_whitespace($desc_workshops);
+        echo '<meta name="description" content="' . $desc_workshops . '" />' . "\n";
     }
 }
 add_action( 'wp_head', 'ac_base_meta_description');

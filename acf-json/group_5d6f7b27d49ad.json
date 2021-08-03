@@ -93,10 +93,10 @@
         },
         {
             "key": "field_605c9dd8d74af",
-            "label": "News page description",
-            "name": "news_page_description",
+            "label": "Publications page description",
+            "name": "publications_page_description",
             "type": "wysiwyg",
-            "instructions": "Add a description to show on the main News & Events list page.",
+            "instructions": "Add a description to show on the main Publications page.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -112,10 +112,10 @@
         },
         {
             "key": "field_605c9daed74ae",
-            "label": "Library page description",
-            "name": "library_page_description",
+            "label": "Projects page description",
+            "name": "projects_page_description",
             "type": "wysiwyg",
-            "instructions": "Add a description to show on the main Library items list page.",
+            "instructions": "Add a description to show on the main Projects list page.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -131,10 +131,10 @@
         },
         {
             "key": "field_605c9de8d74b0",
-            "label": "Workstreams page description",
-            "name": "workstreams_page_description",
+            "label": "Workshops page description",
+            "name": "workshops_page_description",
             "type": "wysiwyg",
-            "instructions": "<strong>This field is currently disabled. Any content you add here will be ignored.<\/strong>",
+            "instructions": "Add a description to show on the main Workshops page.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -166,5 +166,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1619723682
+    "modified": 1626954939
 }

@@ -38,10 +38,15 @@
       $post_thumbnail = get_the_post_thumbnail_url($page_id, 'full');
       $thumbnail_id = get_post_thumbnail_id($page_id);
       $alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
-      $excerpt = wp_trim_words(get_the_content($page_id), 30);
+      if(is_front_page()) {
+        $excerpt = get_bloginfo( "description" );
+      } else {
+        $excerpt = wp_trim_words(get_the_content($page_id), 30);
+      }
       if(!$post_thumbnail) {
         $post_thumbnail = get_field("og_image", "options");
         $post_thumbnail = $post_thumbnail['url'];
+        $alt = $post_thumbnail['alt'];
       }
     ?>
 
@@ -49,9 +54,9 @@
 		<meta name="twitter:site" content="@<?php echo $twitter;?>" />
 		<meta name="twitter:creator" content="@<?php echo $twitter;?>" />
     <meta property="twitter:image" content="<?php echo $post_thumbnail;?>" />
-    <meta property="twitter:image:alt" content="UK Pandemic Ethics Accelerator logo" />
+    <meta property="twitter:image:alt" content="<?php echo $alt;?>" />
 		<meta property="og:url" content="<?php echo get_permalink($page_id);?>" />
-		<meta property="og:title" content="<?php echo esc_html( get_the_title($page_id) );?>" />
+		<meta property="og:title" content="<?php echo get_bloginfo( 'title' ) . ' - ' . esc_html( get_the_title($page_id) );?>" />
 		<meta property="og:description" content="<?php echo $excerpt;?>" />
 		<meta property="og:image" content="<?php echo $post_thumbnail;?>" />
 
