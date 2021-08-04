@@ -75,11 +75,13 @@ function create_publications_categories_taxonomy() {
 // Now register the non-hierarchical taxonomy like tag
 
   register_taxonomy('publications_categories','publications', array(
-    'hierarchical' => false,
+    'hierarchical' => true,
     'labels' => $labels,
     'show_ui' => true,
     'show_in_rest' => true,
     'show_admin_column' => true,
+    'public' => true,
+    'publicly_queryable' => true,
     'update_count_callback' => '_update_post_term_count',
     'query_var' => true,
     'rewrite' => array( 'slug' => 'publications/type' ),
