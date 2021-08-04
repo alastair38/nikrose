@@ -20,7 +20,7 @@ function acbase_start() {
     // adding sidebars to Wordpress
     add_action( 'widgets_init', 'acbase_register_sidebars' );
     // cleaning up excerpt
-    add_filter('excerpt_more', 'acbase_excerpt_more');
+    // add_filter('excerpt_more', 'acbase_excerpt_more');
 
 } /* end joints start */
 
