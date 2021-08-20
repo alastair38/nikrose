@@ -28,6 +28,10 @@ main.container {
   margin-right: (-1 * $gutter-width / 2);
 }
 
+.entry-content {
+  text-align: justify;
+}
+
 .row {
   &.no-margin-bot {
     margin-bottom: 0;
@@ -125,6 +129,97 @@ main.container {
               list-style-type: none;
             }
           }
+        }
+      }
+    }
+  }
+}
+
+// slider block
+
+.row.block.slider-wrapper {
+  position: relative;
+  padding: 0;
+  margin-top: 0;
+  height: 80vh;
+  overflow: hidden;
+  .slick-autoplay-toggle-button {
+    top: 70vh;
+    color: cyan;
+    &:focus {
+      background: none;
+      color: orange;
+    }
+  }
+  @media #{$medium-and-down} {
+    height: 60vh;
+  }
+  @media #{$small-and-down} {
+    height: 40vh;
+  }
+  img {
+    height: 80vh;
+    object-fit: cover;
+    @media #{$medium-and-down} {
+      height: 60vh;
+    }
+    @media #{$small-and-down} {
+      height: 40vh;
+    }
+  }
+  .heading-wrapper {
+    position: absolute;
+    bottom: 30%;
+    right: 4rem;
+    width: max-content;
+    h1 {
+      font-weight: 700;
+      display: inline-block;
+      border-radius: 3px;
+      margin: 0; //initial;
+      color: $neutral-light;
+
+      @media #{$small-and-down} {
+        font-size: 2.2rem;
+      }
+
+      &:after,
+      &:before {
+        content: '';
+        position: absolute;
+        width: 70%;
+        height: 2px;
+        border-radius: 30px;
+        background: $accent-color;
+      }
+      &:after {
+        bottom: -2.75rem;
+        right: -1.25rem;
+      }
+      &:before {
+        top: -1.25rem;
+        left: -1.25rem;
+      }
+    }
+    ul.statement-byline {
+      position: absolute;
+      margin: 0;
+      display: flex;
+      gap: 2rem;
+      justify-content: space-between;
+      bottom: -1.45rem;
+      left: 0;
+      padding: 0 0.5rem;
+      color: $neutral-light;
+      font-family: 'Gruppo';
+      font-size: 1.48rem;
+      @media #{$small-and-down} {
+        font-size: 1.1rem;
+      }
+      li {
+        list-style-type: disc;
+        &:first-child {
+          list-style-type: none;
         }
       }
     }

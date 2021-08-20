@@ -211,6 +211,22 @@ function register_acf_block_types() {
     // ));
 
     acf_register_block_type(array(
+      'name'              => 'slider',
+      'title'             => __('Slider Header'),
+      'description'       => __('Add a statement header image and title'),
+      'render_template' => get_template_directory() . '/blocks/layouts/slider.php',
+      'category'          => 'custom-blocks',
+      'icon' => array(
+      // Specifying a color for the icon (optional: if not set, a readable color will be automatically defined)
+        'foreground' => '#ff005d',
+      // Specifying a dashicon for the block
+        'src' => 'cover-image',
+      ),
+      //'enqueue_style' => get_template_directory_uri() . '/assets/css/style.css',
+      'keywords'          => array( 'statement block', 'header' ),
+  ));
+
+    acf_register_block_type(array(
         'name'              => 'statement',
         'title'             => __('Statement Header'),
         'description'       => __('Add a statement header image and title'),

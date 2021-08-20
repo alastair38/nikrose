@@ -1,5 +1,6 @@
 <?php
 function site_scripts() {
+  $theme_version = wp_get_theme()->get('Version');
   global $wp_styles; // Call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
 
 	// Removes WP version of jQuery
@@ -32,6 +33,10 @@ function site_scripts() {
     // Adding scripts file in the footer
     wp_enqueue_script( 'site-js', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), '', true );
 
+    if(is_front_page()) {
+    wp_enqueue_script( 'slick-js', 'https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.js', array( 'jquery' ), '', true );
+    wp_enqueue_script( 'slick-init', get_template_directory_uri() . '/assets/js/slick_init.js', array( 'slick-js' ), '', true );
+    }
     // Register Slick stylesheet
 
 
@@ -42,12 +47,14 @@ function site_scripts() {
     // Register main stylesheet
     wp_enqueue_style( 'fonts-style', 'https://fonts.googleapis.com/css?family=Lato:100,300,400|Gruppo&display=swap', array(), '', 'all' );
 
-    // wp_enqueue_style( 'slick-style', 'https:////cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), '', 'all' );
-
+    if (is_front_page()) {
+      wp_enqueue_style( 'slick-main', 'https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.css', array(), '', 'all' );
+      wp_enqueue_style( 'slick-theme', 'https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/accessible-slick-theme.min.css', array(), '', 'all' );
+    }
 
 
     // Register main stylesheet
-    wp_enqueue_style( 'site-style', get_template_directory_uri() . '/assets/css/style.css', array(), '', 'all' );
+    wp_enqueue_style( 'site-style', get_template_directory_uri() . '/assets/css/style.css', array(), $theme_version, 'all' );
 
 
 
