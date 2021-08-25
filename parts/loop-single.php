@@ -32,9 +32,13 @@
 					echo '<div class="publication-desc">' . $desc . '</div>';
 				endif;
 
+			endif;
+
+			if(is_singular('projects' )):
+
 				if ( has_post_thumbnail() ) :
 					echo '<figure>';
-					the_post_thumbnail('full', ['class' => 'responsive-img']);
+					the_post_thumbnail('medium', ['class' => 'alignleft']);
 					echo '</figure>';
 				endif;
 

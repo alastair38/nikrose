@@ -281,13 +281,22 @@ figure.hero {
 }
 
 .single figure {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  margin: 0 1rem 1rem 0;
+  float: left;
+  @media #{$small-and-down} {
+    float: none;
+    margin-right: 0;
+  }
   img {
     max-width: 100%;
     object-fit: cover;
     border-radius: 4px;
+    @media #{$small-and-down} {
+      width: 100%;
+    }
   }
   figcaption {
     padding: 0.5rem 1rem;

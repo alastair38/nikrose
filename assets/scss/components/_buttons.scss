@@ -17,8 +17,7 @@
   .btn-flat {
     height: auto;
     line-height: initial;
-    padding: .5rem;
-
+    padding: 0.5rem;
   }
 }
 
@@ -54,7 +53,8 @@
 .btn-floating,
 .btn-large,
 .btn-small,
-.btn-flat, #wp-submit {
+.btn-flat,
+#wp-submit {
   font-size: $button-font-size;
   outline: 0;
   i {
@@ -71,12 +71,12 @@
   color: $button-raised-color;
   background-color: $primary-color;
   text-align: center;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   @extend .z-depth-1;
-  transition: background-color .2s ease-out;
+  transition: background-color 0.2s ease-out;
   cursor: pointer;
   &:hover {
-    background-color: color("orange", "base");
+    background-color: color('orange', 'base');
     color: #000000;
     @extend .z-depth-1-half;
   }
@@ -102,10 +102,11 @@
   border: 1px solid transparent;
   display: inline-flex;
   align-items: center;
-  &:hover, &:focus {
-      background: transparent;
-      color: $off-black;
-      border: 1px solid $off-black;
+  &:hover,
+  &:focus {
+    background: transparent;
+    color: $off-black;
+    border: 1px solid $off-black;
   }
 }
 
@@ -113,7 +114,8 @@
   background: #3fffa6;
   color: $neutral-dark;
   border: 1px solid transparent;
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background: transparent;
     color: $neutral-light;
     border: 1px solid $neutral-light;
@@ -128,11 +130,12 @@
   justify-content: center;
   border: 1px solid transparent;
   svg.icon-twitter {
-    margin-right: .5rem;
+    margin-right: 0.5rem;
     height: 1.25rem;
     width: 1.25rem;
   }
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background: transparent;
     color: $neutral-light;
     border: 1px solid $neutral-light;
@@ -150,11 +153,12 @@
   justify-content: center;
   border: 1px solid transparent;
   svg.icon-mail {
-    margin-right: .5rem;
+    margin-right: 0.5rem;
     height: 1.25rem;
     width: 1.25rem;
   }
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background: transparent;
     color: $neutral-light;
     border: 1px solid $neutral-light;
@@ -170,18 +174,19 @@ a.twitter-handle {
   margin-bottom: 3rem;
   text-decoration: none;
   svg.icon-twitter {
-    margin-right: .5rem;
+    margin-right: 0.5rem;
     height: 1.25rem;
     width: 1.25rem;
   }
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background: transparent;
     color: $link-hover-color;
     border: 1px solid $link-hover-color;
     svg.icon-twitter {
       fill: $neutral-dark;
     }
-}
+  }
 }
 // Library source link button
 
@@ -191,14 +196,14 @@ a.btn-flat.primary-link {
   display: inline-flex;
   align-items: center;
   font-size: 16px;
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background: $link-hover-color;
   }
   .material-icons {
     margin-left: 0.25rem;
   }
 }
-
 
 // search bar button
 
@@ -244,59 +249,63 @@ a.btn-flat.primary-link {
 }
 
 .search-bar {
-    #search-input.search #search {
-      width: 300px;
-      padding: 0 4rem;
-      box-shadow: inset 0px 0px 0px 3px $accent-color;
-      @media #{$small-and-down} {
-        width: calc(100vw - 12rem);
-      }
+  #search-input.search #search {
+    width: 300px;
+    padding: 0 4rem;
+    box-shadow: inset 0px 0px 0px 3px $accent-color;
+    @media #{$small-and-down} {
+      width: calc(100vw - 12rem);
     }
-    #search-input.search.toggle-search #search {
-      width: 56px;
-      padding: 0rem;
-    }
+  }
+  #search-input.search.toggle-search #search {
+    width: 56px;
+    padding: 0rem;
+  }
 }
 
 // Login page admin buttons
 
-#wp-submit, .btn-flat.btn-edit-post-link {
+#wp-submit,
+.btn-flat.btn-edit-post-link {
   background: $off-black;
   color: $neutral-light;
   border: 1px solid transparent;
-  &:hover, &:focus {
-      background: transparent;
-      color: $off-black;
-      border: 1px solid $off-black;
-      display: inline-flex;
-      align-items: center;
+  &:hover,
+  &:focus {
+    background: transparent;
+    color: $off-black;
+    border: 1px solid $off-black;
+    display: inline-flex;
+    align-items: center;
   }
 }
 
 #admin-buttons {
   margin-bottom: 4rem;
   .btn-flat.admin {
-      margin: .5rem;
-      border: 1px solid currentColor;
-      background: transparent;
-    &:hover, &:focus {
+    margin: 0.5rem;
+    border: 1px solid currentColor;
+    background: transparent;
+    &:hover,
+    &:focus {
       background: $neutral-dark;
       color: $neutral-light;
     }
   }
   .btn-flat.admin.logout {
-    background: $accent-color;
+    background: color('purple', 'darken-2');
     color: $neutral-light;
     border: 1px solid currentColor;
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background: transparent;
-      color: $accent-color;
+      color: currentColor;
     }
   }
   a {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     i {
-      margin-right: .25rem;
+      margin-right: 0.25rem;
     }
   }
 }
@@ -304,7 +313,8 @@ a.btn-flat.primary-link {
 .password-reset {
   margin: 1rem 0;
   display: inline-block;
-  a:hover, a:focus {
+  a:hover,
+  a:focus {
     color: $link-hover-color;
   }
 }
@@ -362,7 +372,7 @@ a.btn-flat.primary-link {
   background-color: $button-floating-background;
   border-radius: $button-floating-radius;
   @extend .z-depth-1;
-  transition: background-color .3s;
+  transition: background-color 0.3s;
   cursor: pointer;
   vertical-align: middle;
   i {
@@ -433,7 +443,7 @@ button.btn-floating {
   }
   &.toolbar {
     &.active {
-      &>a i {
+      & > a i {
         opacity: 0;
       }
     }
@@ -508,16 +518,16 @@ button.btn-floating {
   background-color: transparent;
   color: $button-flat-color;
   cursor: pointer;
-  transition: background-color .2s;
+  transition: background-color 0.2s;
   &:focus,
   &:hover {
     box-shadow: none;
   }
   &:focus {
-    background-color: rgba(0, 0, 0, .1);
+    background-color: rgba(0, 0, 0, 0.1);
   }
   &.disabled,
-  &.btn-flat[disabled]  {
+  &.btn-flat[disabled] {
     background-color: transparent !important;
     color: $button-flat-disabled-color !important;
     cursor: default;

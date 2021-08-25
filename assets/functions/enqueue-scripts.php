@@ -57,7 +57,6 @@ function site_scripts() {
     wp_enqueue_style( 'site-style', get_template_directory_uri() . '/assets/css/style.css', array(), $theme_version, 'all' );
 
 
-
     // Deregister admin stylesheet so that it doesn't load on the front-end form
 
     wp_deregister_style( 'wp-admin' );

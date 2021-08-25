@@ -28,8 +28,16 @@ main.container {
   margin-right: (-1 * $gutter-width / 2);
 }
 
+// Text alignments for content areas
 .entry-content {
   text-align: justify;
+  form {
+    text-align: left;
+  }
+}
+
+.resource-item {
+  text-align: left;
 }
 
 .row {

@@ -2190,13 +2190,22 @@ figure.hero {
   font-style: italic; }
 
 .single figure {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  margin: 0 1rem 1rem 0;
+  float: left; }
+  @media only screen and (max-width: 600px) {
+    .single figure {
+      float: none;
+      margin-right: 0; } }
   .single figure img {
     max-width: 100%;
     object-fit: cover;
     border-radius: 4px; }
+    @media only screen and (max-width: 600px) {
+      .single figure img {
+        width: 100%; } }
   .single figure figcaption {
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
@@ -2740,6 +2749,11 @@ main.container {
 
 .entry-content {
   text-align: justify; }
+  .entry-content form {
+    text-align: left; }
+
+.resource-item {
+  text-align: left; }
 
 .row.no-margin-bot {
   margin-bottom: 0; }
@@ -4282,7 +4296,7 @@ ul.grid-gallery {
   .btn-flat {
     height: auto;
     line-height: initial;
-    padding: .5rem; } }
+    padding: 0.5rem; } }
 .btn.disabled, .disabled.btn-large, .disabled.btn-small,
 .btn-floating.disabled,
 .btn-large.disabled,
@@ -4333,14 +4347,16 @@ ul.grid-gallery {
 .btn-floating,
 .btn-large,
 .btn-small,
-.btn-flat, #wp-submit {
+.btn-flat,
+#wp-submit {
   font-size: 14px;
   outline: 0; }
   .btn i, .btn-large i, .btn-small i,
   .btn-floating i,
   .btn-large i,
   .btn-small i,
-  .btn-flat i, #wp-submit i {
+  .btn-flat i,
+  #wp-submit i {
     font-size: 1.3rem;
     line-height: inherit; }
 
@@ -4349,8 +4365,8 @@ ul.grid-gallery {
   color: #fff;
   background-color: #002147;
   text-align: center;
-  letter-spacing: .5px;
-  transition: background-color .2s ease-out;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s ease-out;
   cursor: pointer; }
   .btn:hover, .btn-large:hover, .btn-small:hover {
     background-color: #ff9800;
@@ -4394,7 +4410,7 @@ ul.grid-gallery {
   justify-content: center;
   border: 1px solid transparent; }
   .cta a.btn-flat.social-cta svg.icon-twitter {
-    margin-right: .5rem;
+    margin-right: 0.5rem;
     height: 1.25rem;
     width: 1.25rem; }
   .cta a.btn-flat.social-cta:hover, .cta a.btn-flat.social-cta:focus {
@@ -4412,7 +4428,7 @@ ul.grid-gallery {
   justify-content: center;
   border: 1px solid transparent; }
   .cta a.btn-flat.contact-cta svg.icon-mail {
-    margin-right: .5rem;
+    margin-right: 0.5rem;
     height: 1.25rem;
     width: 1.25rem; }
   .cta a.btn-flat.contact-cta:hover, .cta a.btn-flat.contact-cta:focus {
@@ -4429,7 +4445,7 @@ a.twitter-handle {
   margin-bottom: 3rem;
   text-decoration: none; }
   a.twitter-handle svg.icon-twitter {
-    margin-right: .5rem;
+    margin-right: 0.5rem;
     height: 1.25rem;
     width: 1.25rem; }
   a.twitter-handle:hover, a.twitter-handle:focus {
@@ -4493,11 +4509,14 @@ a.btn-flat.primary-link {
   width: 56px;
   padding: 0rem; }
 
-#wp-submit, .btn-flat.btn-edit-post-link {
+#wp-submit,
+.btn-flat.btn-edit-post-link {
   background: #424242;
   color: #ffffff;
   border: 1px solid transparent; }
-  #wp-submit:hover, #wp-submit:focus, .btn-flat.btn-edit-post-link:hover, .btn-flat.btn-edit-post-link:focus {
+  #wp-submit:hover, #wp-submit:focus,
+  .btn-flat.btn-edit-post-link:hover,
+  .btn-flat.btn-edit-post-link:focus {
     background: transparent;
     color: #424242;
     border: 1px solid #424242;
@@ -4507,28 +4526,29 @@ a.btn-flat.primary-link {
 #admin-buttons {
   margin-bottom: 4rem; }
   #admin-buttons .btn-flat.admin {
-    margin: .5rem;
+    margin: 0.5rem;
     border: 1px solid currentColor;
     background: transparent; }
     #admin-buttons .btn-flat.admin:hover, #admin-buttons .btn-flat.admin:focus {
       background: #212121;
       color: #ffffff; }
   #admin-buttons .btn-flat.admin.logout {
-    background: #F2F071;
+    background: #7b1fa2;
     color: #ffffff;
     border: 1px solid currentColor; }
     #admin-buttons .btn-flat.admin.logout:hover, #admin-buttons .btn-flat.admin.logout:focus {
       background: transparent;
-      color: #F2F071; }
+      color: currentColor; }
   #admin-buttons a {
-    margin-top: .5rem; }
+    margin-top: 0.5rem; }
     #admin-buttons a i {
-      margin-right: .25rem; }
+      margin-right: 0.25rem; }
 
 .password-reset {
   margin: 1rem 0;
   display: inline-block; }
-  .password-reset a:hover, .password-reset a:focus {
+  .password-reset a:hover,
+  .password-reset a:focus {
     color: #42A5F5; }
 
 .btn-floating {
@@ -4543,7 +4563,7 @@ a.btn-flat.primary-link {
   padding: 0;
   background-color: #42A5F5;
   border-radius: 50%;
-  transition: background-color .3s;
+  transition: background-color 0.3s;
   cursor: pointer;
   vertical-align: middle; }
   .btn-floating:hover {
@@ -4682,7 +4702,7 @@ button.btn-floating {
   background-color: transparent;
   color: #343434;
   cursor: pointer;
-  transition: background-color .2s; }
+  transition: background-color 0.2s; }
   .btn-flat:focus, .btn-flat:hover {
     box-shadow: none; }
   .btn-flat:focus {

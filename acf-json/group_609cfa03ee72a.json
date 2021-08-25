@@ -1,13 +1,13 @@
 {
     "key": "group_609cfa03ee72a",
-    "title": "Publication information",
+    "title": "Publication Details",
     "fields": [
         {
             "key": "field_609cfa0e87d64",
-            "label": "Details",
+            "label": "",
             "name": "publication_description",
             "type": "wysiwyg",
-            "instructions": "Add any relevant details about this publication, such as journal name, volume, page numbers etc. Format text by selecting it and clicking the <strong>'b'<\/strong> button for bold or the <em>'i'<\/em> for italic. To add a description or abstract, use the text editor field below the <strong>Files<\/strong> block.<br><br>\r\n\r\neg: <strong>David Reubi<\/strong>, 2018, <em>Economy & Society<\/em>, 47, 1, 83-110 | Part of Special Issue on <em>Facts, Power and the Politics of Global Evidence<\/em> edited by Ann Kelly & Linsey McGoey.",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -39,5 +39,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1620987010
+    "modified": 1629889574
 }

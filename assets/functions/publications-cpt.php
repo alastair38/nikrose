@@ -37,7 +37,7 @@ function ac_base_publications() {
       'capability_type' => 'page',
       'hierarchical' => false,
       /* the next one is important, it tells what's enabled in the post editor */
-      'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt'),
+      'supports' => array( 'title', 'editor'),
       'taxonomies'          => array('publications_categories'),
     ) /* end of options */
   ); /* end of register post type */

@@ -1,0 +1,48 @@
+{
+    "key": "group_612616bbd8c17",
+    "title": "Adding projects or workshops - quick tips",
+    "fields": [
+        {
+            "key": "field_612616c98a376",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<ol>\r\n<li>Add your content details in the main text editor field below. &#128071;<\/li>\r\n\r\n<li>Use the <strong>Excerpt<\/strong> field at the bottom of the page to add a brief description that will show on the main page for this content type. This should be no more than 2-3 lines long.<\/li>\r\n\r\n<li>Add an image to show in the main page grid layout using the <strong>Featured Image<\/strong> field in the right-hand column &#128073;. This image will also show on the individual page for projects.<\/li>\r\n\r\n<li>Use the <strong>Files<\/strong> field to upload any relevant documents to your content.<\/li>\r\n<\/ol>",
+            "new_lines": "",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "projects"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "workshops"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1629889747
+}
