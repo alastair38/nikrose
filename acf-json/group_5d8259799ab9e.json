@@ -1,6 +1,6 @@
 {
     "key": "group_5d8259799ab9e",
-    "title": "Latest Library Outputs",
+    "title": "Featured Books",
     "fields": [
         {
             "key": "field_608a8023e25c9",
@@ -22,7 +22,7 @@
         {
             "key": "field_6061ecb889831",
             "label": "Section heading",
-            "name": "library_block_title",
+            "name": "book_block_title",
             "type": "text",
             "instructions": "Set the heading for this block.",
             "required": 0,
@@ -37,6 +37,28 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_61684eae7e404",
+            "label": "book",
+            "name": "featured_book",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "books"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
         }
     ],
     "location": [
@@ -44,7 +66,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/latest-publications"
+                "value": "acf\/featured-book"
             }
         ]
     ],
@@ -56,5 +78,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1619689760
+    "modified": 1634293082
 }

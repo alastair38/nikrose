@@ -1,9 +1,4 @@
 <?php
-
-/*
-Template Name: Contact Page
-*/
-
 get_header(); ?>
 
 <main class="container">
@@ -11,8 +6,7 @@ get_header(); ?>
 
 		<?php if (have_posts()) : while (have_posts()) : the_post();
 
-
-			get_template_part( 'parts/loop', 'page-contact' );
+			get_template_part( 'parts/loop', 'page-about' );
 
 			endwhile; endif;
 
@@ -22,9 +16,4 @@ get_header(); ?>
 
 </main> <!-- end main -->
 
-<?php
-
-get_template_part( 'parts/content', 'contactjson' );
-
-get_footer();
-?>
+<?php get_footer(); ?>

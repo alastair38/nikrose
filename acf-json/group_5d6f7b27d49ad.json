@@ -93,7 +93,7 @@
         },
         {
             "key": "field_605c9dd8d74af",
-            "label": "Publications page description",
+            "label": "Articles page description",
             "name": "publications_page_description",
             "type": "wysiwyg",
             "instructions": "Add a description to show on the main Publications page.",
@@ -111,8 +111,27 @@
             "delay": 0
         },
         {
+            "key": "field_6166e9a119529",
+            "label": "Books page description",
+            "name": "books_page_description",
+            "type": "wysiwyg",
+            "instructions": "Add a description to show on the main Publications page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
             "key": "field_605c9daed74ae",
-            "label": "Projects page description",
+            "label": "Research projects page description",
             "name": "projects_page_description",
             "type": "wysiwyg",
             "instructions": "Add a description to show on the main Projects list page.",
@@ -131,8 +150,8 @@
         },
         {
             "key": "field_605c9de8d74b0",
-            "label": "Workshops page description",
-            "name": "workshops_page_description",
+            "label": "Lectures page description",
+            "name": "lectures_page_description",
             "type": "wysiwyg",
             "instructions": "Add a description to show on the main Workshops page.",
             "required": 0,
@@ -166,5 +185,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1626954939
+    "modified": 1634134452
 }

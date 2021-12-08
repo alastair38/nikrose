@@ -69,10 +69,10 @@ function register_acf_block_types() {
     ));
 
     acf_register_block_type(array(
-        'name'              => 'latest_publications',
-        'title'             => __('Featured library items'),
+        'name'              => 'featured_book',
+        'title'             => __('Featured book'),
         'description'       => __('Display your featured library outputs in a list layout'),
-        'render_template' => get_template_directory() . '/blocks/layouts/latest_publications.php',
+        'render_template' => get_template_directory() . '/blocks/layouts/featured_book.php',
         'category'          => 'custom-blocks',
         'icon' => array(
         // Specifying a color for the icon (optional: if not set, a readable color will be automatically defined)
@@ -81,24 +81,24 @@ function register_acf_block_types() {
           'src' => 'book',
         ),
         //'enqueue_style' => get_template_directory_uri() . '/assets/css/style.css',
-        'keywords'          => array( 'featured', 'library' ),
+        'keywords'          => array( 'featured', 'book' ),
     ));
 
-    // acf_register_block_type(array(
-    //     'name'              => 'paragraph_with_image',
-    //     'title'             => __('Paragraph with Image'),
-    //     'description'       => __('Add a paragraph with accompanying image'),
-    //     'render_template' => get_template_directory() . '/blocks/layouts/paragraph_image.php',
-    //     'category'          => 'custom-blocks',
-    //     'icon' => array(
-    //     // Specifying a color for the icon (optional: if not set, a readable color will be automatically defined)
-    //       'foreground' => '#ff005d',
-    //     // Specifying a dashicon for the block
-    //       'src' => 'images-alt2',
-    //     ),
-    //     //'enqueue_style' => get_template_directory_uri() . '/assets/css/style.css',
-    //     'keywords'          => array( 'paragraph','image' ),
-    // ));
+    acf_register_block_type(array(
+        'name'              => 'media_coverage',
+        'title'             => __('Media coverage'),
+        'description'       => __('Add a media coverage with link'),
+        'render_template' => get_template_directory() . '/blocks/layouts/media_coverage.php',
+        'category'          => 'custom-blocks',
+        'icon' => array(
+        // Specifying a color for the icon (optional: if not set, a readable color will be automatically defined)
+          'foreground' => '#ff005d',
+        // Specifying a dashicon for the block
+          'src' => 'images-alt2',
+        ),
+        //'enqueue_style' => get_template_directory_uri() . '/assets/css/style.css',
+        'keywords'          => array( 'media coverage','image' ),
+    ));
 
     // acf_register_block_type(array(
     //     'name'              => 'projects',

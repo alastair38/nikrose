@@ -30,7 +30,6 @@ main.container {
 
 // Text alignments for content areas
 .entry-content {
-  text-align: justify;
   form {
     text-align: left;
   }
@@ -65,15 +64,9 @@ main.container {
     &.statement {
       //background-color: #ff4747;
       color: color('grey', 'darken-4');
-      background-color: transparent;
-      background-repeat: no-repeat;
-      background-position: left 45%;
-      background-size: cover;
-      height: 80vh;
-      padding: 0;
+
       display: flex;
-      align-items: flex-end;
-      justify-content: flex-end;
+
       position: relative;
       @media #{$medium-and-down} {
         background-position: left center;
@@ -83,59 +76,49 @@ main.container {
         }
       }
       .heading-wrapper {
-        position: absolute;
-        bottom: 30%;
-        right: 4rem;
-        width: max-content;
+        @media #{$small-and-down} {
+          flex-direction: column;
+        }
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        width: 80%;
+        margin: auto;
         h1 {
           font-weight: 700;
           display: inline-block;
           border-radius: 3px;
           margin: 0; //initial;
-          color: $neutral-light;
+          color: $neutral-dark;
 
           @media #{$small-and-down} {
             font-size: 2.2rem;
           }
-
-          &:after,
-          &:before {
-            content: '';
-            position: absolute;
-            width: 70%;
-            height: 2px;
-            border-radius: 30px;
-            background: $accent-color;
-          }
-          &:after {
-            bottom: -2.75rem;
-            right: -1.25rem;
-          }
-          &:before {
-            top: -1.25rem;
-            left: -1.25rem;
-          }
         }
-        ul.statement-byline {
-          position: absolute;
-          margin: 0;
-          display: flex;
-          gap: 2rem;
-          justify-content: space-between;
-          bottom: -1.45rem;
-          left: 0;
-          padding: 0 0.5rem;
-          color: $neutral-light;
-          font-family: 'Gruppo';
-          font-size: 1.48rem;
+        img {
           @media #{$small-and-down} {
-            font-size: 1.1rem;
+            width: 100%;
           }
-          li {
-            list-style-type: disc;
-            &:first-child {
-              list-style-type: none;
-            }
+          width: 300px;
+          aspect-ratio: 1;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+        a {
+          border-radius: 30px;
+          padding: 0.5rem 1rem;
+          display: inline-flex;
+          align-items: center;
+          text-decoration: none;
+          transition: 350ms;
+          border: 2px solid;
+          &:hover,
+          &:focus {
+            color: $link-hover-color;
+            background: transparent;
+            transition: 350ms;
           }
         }
       }
@@ -143,6 +126,30 @@ main.container {
   }
 }
 
+// Featured book block
+.row.block.featured-book {
+  @media #{$small-and-down} {
+    padding: 0;
+  }
+  padding: 0rem 10%;
+  .book-block-details {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    img {
+      border-radius: 50%;
+    }
+    figure {
+      h2 {
+        width: 80%;
+        margin: auto;
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
 // slider block
 
 .row.block.slider-wrapper {
@@ -219,7 +226,7 @@ main.container {
       left: 0;
       padding: 0 0.5rem;
       color: $neutral-light;
-      font-family: 'Gruppo';
+      font-family: 'Comfortaa';
       font-size: 1.48rem;
       @media #{$small-and-down} {
         font-size: 1.1rem;
@@ -230,6 +237,28 @@ main.container {
           list-style-type: none;
         }
       }
+    }
+  }
+}
+
+// Media coverage block
+
+.media-coverage-block {
+  background: color('grey', 'lighten-5');
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 2rem 0;
+  h2.media-title {
+    font-size: 1.25rem;
+    margin-top: 0;
+  }
+  .media-date {
+    display: flex;
+    align-items: center;
+    svg {
+      height: 1rem;
+      width: 1rem;
+      fill: $accent-color;
     }
   }
 }
@@ -411,6 +440,50 @@ ul#contact {
   }
 }
 
+// Articles layout
+
+.article-details {
+  padding: 1rem 0;
+}
+
+// Books layout
+
+.book-details {
+  padding: 1rem 0;
+}
+
+.book-details.grid {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.book-details .book-link {
+  width: fit-content;
+  margin-top: 1rem;
+}
+.book-details.grid .book-link {
+  grid-column: 1 / -1;
+  margin-top: 0;
+}
+
+.book-details.grid img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+div.isbn {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  @media #{$small-and-down} {
+    gap: 0;
+  }
+}
+
 // Byline / tags
 
 span.byline,
@@ -435,6 +508,17 @@ span.byline svg {
   margin-right: 0.5rem;
 }
 
+span.book-tags,
+span.article-tags {
+  display: inline-block;
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  border-radius: 4px;
+  background: $neutral-dark;
+  color: $neutral-light;
+  padding: 0.25rem 1rem;
+}
 // Share links
 
 ul.share-links.center.columns {

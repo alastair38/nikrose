@@ -18,12 +18,15 @@
   background-color: $neutral-light;
   width: 100%;
   height: $navbar-height;
-  line-height: $navbar-height  ;
+  line-height: $navbar-height;
 
-  a { color: $neutral-dark; }
+  a {
+    color: $neutral-dark;
+  }
 
   span,
-  [class^="mdi-"], [class*="mdi-"],
+  [class^='mdi-'],
+  [class*='mdi-'],
   span.material-icons {
     display: block;
     font-size: 24px;
@@ -41,9 +44,11 @@
   }
 
   @media #{$large-and-up} {
-    a.sidenav-trigger, #slide-out { display: none; }
+    a.sidenav-trigger,
+    #slide-out {
+      display: none;
+    }
   }
-
 
   // Collapse button
   .sidenav-trigger {
@@ -59,9 +64,10 @@
     }
   }
 
-  #logo, #mobilelogo {
+  #logo,
+  #mobilelogo {
     vertical-align: middle;
-    margin: 2px .5rem;
+    margin: 2px 0.5rem;
     padding: 3px;
     background: white;
     height: 60px;
@@ -70,37 +76,35 @@
     @media #{$medium-and-down} {
       height: 50px;
       width: 50px;
-      margin: 7px 0 7px .5rem;
+      margin: 7px 0 7px 0.5rem;
     }
   }
-
 
   // Logo
   .brand-logo {
     @media #{$large-and-up} {
-    //color: $neutral-dark;
-
-  }
-  display: inline-flex;
-  font-size: 1.5rem;
-  align-items: center;
-  justify-content: center;
-  padding: 0 0 0 1rem;
-  font-weight: bold;
-  margin: 0;
-  // &:before {
-  //   content: '';
-  //   border-radius: 50%;
-  //   margin-right: 1rem;
-  //   width: 2.5rem;
-  //   height: 2.5rem;
-  //   background-image: url('http://davidreubi.local/wp-content/uploads/2015/05/david-reubi-141x150-1.jpg');
-  //   background-color: $accent-color;
-  //   background-blend-mode: multiply;
-  //   background-size: 100%;
-  //   background-position: center center;
-  // }
-  line-height: inherit;
+      //color: $neutral-dark;
+    }
+    display: inline-flex;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 0 1rem;
+    font-weight: bold;
+    margin: 0;
+    // &:before {
+    //   content: '';
+    //   border-radius: 50%;
+    //   margin-right: 1rem;
+    //   width: 2.5rem;
+    //   height: 2.5rem;
+    //   background-image: url('http://davidreubi.local/wp-content/uploads/2015/05/david-reubi-141x150-1.jpg');
+    //   background-color: $accent-color;
+    //   background-blend-mode: multiply;
+    //   background-size: 100%;
+    //   background-position: center center;
+    // }
+    line-height: inherit;
     @media #{$medium-and-down} {
       padding: 0rem;
       font-size: 1.25rem;
@@ -123,12 +127,15 @@
       // left: 50%;
       // transform: translateX(-50%);
 
-      &.left, &.right {
+      &.left,
+      &.right {
         padding: 0;
         transform: none;
       }
 
-      &.left { left: 0.5rem; }
+      &.left {
+        left: 0.5rem;
+      }
       &.right {
         right: 0.5rem;
         left: auto;
@@ -141,7 +148,8 @@
     }
 
     i,
-    [class^="mdi-"], [class*="mdi-"],
+    [class^='mdi-'],
+    [class*='mdi-'],
     span.material-icons {
       float: left;
       margin-right: 15px;
@@ -158,7 +166,6 @@
     margin: 1rem 10%;
   }
 
-
   // Title
   .nav-title {
     display: inline-block;
@@ -166,13 +173,12 @@
     padding: 28px 0;
   }
 
-
   // Navbar Links
   ul {
     margin: 0;
 
     li {
-      transition: background-color .3s;
+      transition: background-color 0.3s;
       float: left;
       padding: 0;
 
@@ -182,10 +188,11 @@
           &::after {
             content: '';
             position: absolute;
-            left: 10px;
-            right: 10px;
-            height: 5px;
-            bottom: 1.4rem;
+            left: 15px;
+            right: 15px;
+            height: 4px;
+            bottom: 1.25rem;
+            border-radius: 30px;
             background: $accent-color;
             z-index: -1;
             @media #{$medium-and-down} {
@@ -197,14 +204,17 @@
     }
     a {
       position: relative;
-      transition: background-color .3s;
+      transition: background-color 0.3s;
       font-size: $navbar-font-size;
       color: $off-black;
       display: block;
       padding: 0 15px;
       cursor: pointer;
 
-      &.btn, &.btn-large, &.btn-flat, &.btn-floating {
+      &.btn,
+      &.btn-large,
+      &.btn-flat,
+      &.btn-floating {
         margin-top: -2px;
         margin-left: 15px;
         margin-right: 15px;
@@ -218,10 +228,11 @@
       &:hover::after {
         content: '';
         position: absolute;
-        left: 10px;
-        right: 10px;
-        height: 5px;
-        bottom: 1.4rem;
+        left: 15px;
+        right: 15px;
+        height: 4px;
+        bottom: 1.25rem;
+        border-radius: 30px;
         background: $accent-color;
         z-index: -1;
         @media #{$medium-and-down} {
@@ -250,8 +261,12 @@
       border: none;
       padding-left: 2rem;
 
-      &:focus, &[type=text]:valid, &[type=password]:valid,
-      &[type=email]:valid, &[type=url]:valid, &[type=date]:valid {
+      &:focus,
+      &[type='text']:valid,
+      &[type='password']:valid,
+      &[type='email']:valid,
+      &[type='url']:valid,
+      &[type='date']:valid {
         border: none;
         box-shadow: none;
       }
@@ -262,10 +277,12 @@
       left: 0;
 
       i {
-        color: rgba(255,255,255,.7);
-        transition: color .3s;
+        color: rgba(255, 255, 255, 0.7);
+        transition: color 0.3s;
       }
-      &.active i { color: $navbar-font-color; }
+      &.active i {
+        color: $navbar-font-color;
+      }
     }
   }
 }
@@ -284,7 +301,9 @@
   nav.nav-extended .nav-wrapper {
     min-height: $navbar-height;
   }
-  nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
+  nav .nav-wrapper i,
+  nav a.sidenav-trigger,
+  nav a.sidenav-trigger i {
     height: $navbar-height;
     line-height: $navbar-line-height;
   }
@@ -308,14 +327,15 @@ ol.col.s12.breadcrumbs {
     justify-content: center;
     font-size: 14px;
     &:before {
-    content: "\00BB \0020";
-    padding: 0 .25rem 0 .35rem;
-    margin-bottom: 1px;
-    color: $accent-color;
+      content: '\00BB \0020';
+      padding: 0 0.25rem 0 0.35rem;
+      margin-bottom: 1px;
+      color: $accent-color;
     }
     a {
       color: color('grey', 'darken-3');
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         color: $link-hover-color;
       }
     }

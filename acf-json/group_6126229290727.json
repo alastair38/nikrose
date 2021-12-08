@@ -1,6 +1,6 @@
 {
     "key": "group_6126229290727",
-    "title": "Adding publications - quick tips",
+    "title": "Adding articles - quick tips",
     "fields": [
         {
             "key": "field_612622929d963",
@@ -15,7 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "message": "<ol>\r\n<li>Add any relevant details about this publication, such as journal name, volume, page numbers etc in the <strong>Publication Details<\/strong> field. This text will act as an excerpt for this publication. These details will show at the top of the individual page for this publications as well as on the main publications page. For example:<br>\r\n<div style=\"background: whitesmoke; padding: 0.5rem 0.75rem; margin-top: 0.5rem;\"><strong>David Reubi<\/strong>, 2018, <em>Economy & Society<\/em>, 47, 1, 83-110 | Part of Special Issue on <em>Facts, Power and the Politics of Global Evidence<\/em> edited by Ann Kelly & Linsey McGoey.<\/div><\/li>\r\n<li>Assign this publication to a category by checking the relevant <strong>Publication Categories<\/strong> checkbox in the right-hand column. &#128073;<\/li>\r\n\r\n<li>To add a description or abstract, use the main text editor field below <strong>Publications Details<\/strong>. &#128071;<\/li>\r\n\r\n<li>Use the <strong>Files<\/strong> field to upload any relevant documents to your content.<\/li>\r\n<\/ol>",
+            "message": "<ol>\r\n<li>Add any relevant details about this publication, such as journal name, volume, page numbers etc in the fields below.  These will show on the main <strong>Articles<\/strong> page<\/li>\r\n<li>Assign this publication to a category by checking the relevant <strong>Article Categories<\/strong> checkbox in the right-hand column. &#128073;<\/li>\r\n\r\n<li>To add a description or abstract, use the main text editor field below. This will only show on the individual article page (alongside the other details).<\/li>\r\n<\/ol>",
             "new_lines": "",
             "esc_html": 0
         }
@@ -25,7 +25,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "publications"
+                "value": "articles"
             }
         ]
     ],
@@ -37,5 +37,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1629889943
+    "modified": 1634040534
 }

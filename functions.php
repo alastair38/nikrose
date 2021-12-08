@@ -54,12 +54,16 @@ require_once(get_template_directory().'/assets/functions/projects-cpt.php');
 
 require_once(get_template_directory().'/assets/functions/publications-cpt.php');
 
-require_once(get_template_directory().'/assets/functions/workshops-cpt.php');
+require_once(get_template_directory().'/assets/functions/lectures-cpt.php');
+
+require_once(get_template_directory().'/assets/functions/news-cpt.php');
+
+require_once(get_template_directory().'/assets/functions/books-cpt.php');
 
 function include_cpt_search( $query ) {
 
     if ( $query->is_search && !is_admin() ) { // added !is_admin() so admin filters don't break
-		$query->set( 'post_type', array( 'post', 'page', 'projects', 'publications', 'workshops' ) );
+		$query->set( 'post_type', array( 'post', 'page', 'projects', 'articles', 'news', 'lectures' ) );
     }
 
     return $query;

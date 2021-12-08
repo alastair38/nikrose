@@ -1,12 +1,22 @@
+.feat-pages-wrapper {
+  max-width: 80%;
+  margin: auto;
+}
+
 .feat {
-  border: 1px solid color('grey', 'lighten-2');
+  // border: 1px solid color('grey', 'lighten-2');
   border-radius: 3px;
   line-height: 0;
-  //padding: .25rem;
   background: $neutral-light;
   margin-bottom: 1rem;
   a {
+    border-radius: 30px;
+    padding: 0.25rem 0.75rem;
+    display: inline-flex;
+    align-items: center;
     text-decoration: none;
+    transition: 350ms;
+    border: 2px solid;
   }
   a:hover,
   a:focus {
@@ -25,10 +35,10 @@
     text-align: center;
   }
   img {
-    border-radius: 3px 3px 0 0;
+    padding: 0.5rem;
     width: 100%;
     height: 175px;
-    object-fit: cover;
+    object-fit: fill;
     aspect-ratio: 4/3;
   }
   .feat-content {
@@ -286,11 +296,14 @@ ul.grid-gallery {
 }
 
 .article-list {
-  font-size: 0.9rem;
   position: relative;
-  padding: 1rem;
+  padding: 1.5rem;
   background: color('grey', 'lighten-5');
-  margin: 0 0 2rem 0;
+  border-radius: 4px;
+  margin: 0 0 3rem 0;
+  a {
+    text-decoration: none;
+  }
   .article-footer {
     display: flex;
     align-items: center;
@@ -308,7 +321,7 @@ ul.grid-gallery {
   h2,
   h3 {
     font-size: 1.25rem;
-    font-weight: normal;
+    font-weight: 600;
     margin: 0.25rem 0;
   }
   span.badge.new {
@@ -319,15 +332,33 @@ ul.grid-gallery {
     font-size: 12px;
     border-radius: 3px;
   }
+  &:after {
+    content: '';
+    background: $accent-color;
+    position: absolute;
+    height: 1px;
+    bottom: -0.5rem;
+    left: 40%;
+    right: 0%;
+  }
+}
 
+.article-link {
+  margin-top: 1rem;
   a {
-    display: flex;
+    border-radius: 30px;
+    background: transparent;
+    padding: 0.25rem 0.75rem;
+    display: inline-flex;
     align-items: center;
     text-decoration: none;
     transition: 350ms;
+    border: 2px solid;
+    font-size: 0.9rem;
     &:hover,
     &:focus {
       color: $link-hover-color;
+      background: transparent;
       transition: 350ms;
     }
     i {
@@ -338,15 +369,6 @@ ul.grid-gallery {
       border-radius: 50%;
       margin-left: 0.5rem;
     }
-  }
-  &:after {
-    content: '';
-    background: $accent-color;
-    position: absolute;
-    height: 1px;
-    bottom: -0.5rem;
-    left: 40%;
-    right: 0%;
   }
 }
 

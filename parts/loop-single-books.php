@@ -1,19 +1,13 @@
 <?php //get_template_part( 'parts/content', 'breadcrumbs' ); ?>
 
-<article id="post-<?php the_ID(); ?>" class="<?php echo $post->post_name;?>" role="article" itemscope itemtype="http://schema.org/blogPost">
+<article id="post-<?php the_ID(); ?>" class="<?php echo $post->post_name;?>" role="article" iitemscope itemtype="https://schema.org/Book">
 
 		<header class="article-header">
 
 			<?php get_template_part( 'parts/content', 'breadcrumbs' ); ?>
 
-			<h1 id="skip-target" class="entry-title single-title h4" itemprop="headline"><?php the_title();?></h1>
+			<h1 id="skip-target" class="entry-title single-title h4" itemprop="name"><?php the_title();?></h1>
 			<?php 
-			// if(is_singular( 'post' )):
-
-			// get_template_part( 'parts/content', 'byline' );
-
-			// endif;
-
 
 			get_template_part( 'parts/content', 'share' ); ?>
 
@@ -23,50 +17,6 @@
 
 			
 			<?php
-
-			if(is_singular( 'articles' )):
-			
-			$desc = get_field("publication_description");
-
-				if( $desc ): 
-					echo '<div class="publication-desc">' . $desc . '</div>';
-				endif;
-
-			endif;
-
-			if(is_singular('lectures')):
-
-				echo '<div class="article-details">';
-			
-				$date = get_field("lecture_date");
-				$link = get_field("links");
-				$desc = get_field("lecture_description");
-				$video = get_field("video_link");
-			
-				if( $desc ): 
-					echo $desc;
-				endif;
-			
-				// if( $date['year'] ): 
-				// 	if( $date['month']):
-				// 	echo	$date['month'] . ' ';
-				// 	endif;
-				// 	echo $date['year'] . '.';
-				// endif;
-			
-				if( $video ): 
-					echo '<figure class="video-wrapper">' . $video . '<figcaption>Watch the video of the <em>' . get_the_title() . '</em> lecture</figcaption></figure>';
-				endif;
-			
-				if( $link['Lecture_link'] ): 
-					echo '<div class="article-link"><a href="' . $link['Lecture_link'] . '">Go to ' . $link['type_of_link'] . ' (external)<svg class="icon right" aria-hidden="true"><use xlink:href="' . get_stylesheet_directory_uri() . '/assets/icons/symbol-defs.svg#icon-' . $link['type_of_link'] . '"></use></svg></a></div>';
-				endif;
-			
-				echo '</div>';
-
-			endif;
-
-			if(is_singular('books' )):
 
 					$thumbnail = get_the_post_thumbnail_url(); 
 					$editors = get_field("editors");
@@ -87,7 +37,7 @@
 
 					if($thumbnail):
 						$alt_text = get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true );
-						echo '<img src="' . $thumbnail . '" alt="' . $alt_text . '" width="100" height="100"/>';
+						echo '<img itemprop="image" src="' . $thumbnail . '" alt="' . $alt_text . '" width="100" height="100"/>';
 					endif;
 
 					echo '<div class="book-content">';
@@ -97,7 +47,7 @@
 					endif;
 
 					if( $pages ): 
-						echo $pages . 'pp. ';
+						echo '<span itemprop="numberOfPages">' . $pages . '</span>pp. ';
 					endif;
 					
 					if( $editors ): 
@@ -105,7 +55,7 @@
 					endif;
 
 					if( $pubTitle ): 
-						echo ' <em>' . $pubTitle . '</em>, ';
+						echo ' <em itemprop="publication">' . $pubTitle . '</em>, ';
 					endif;
 
 					if( $volumeDetails ): 
@@ -113,7 +63,7 @@
 					endif;
 
 					if( $publisher ): 
-						echo $publisher . ' ';
+						echo '<span itemprop="publisher">' . $publisher . '</span> ';
 					endif;
 
 					if( $pubDate['year'] ): 
@@ -126,35 +76,32 @@
 					endif;
 
 					if( $isbn): 
-						
+		
 						echo '<div class="isbn">';
-
+				
 						if( $isbn['issn']):
 							echo '<span class="isbn">ISSN: ' .	$isbn['issn'] . '</span> ';
 						endif;
-
+				
 						if( $isbn['paperback']):
-							echo '<span class="isbn"><strong>Pb</strong> ISBN: ' .	$isbn['paperback'] . '</span> ';
+							echo '<span class="isbn"><strong>Pb</strong> ISBN:<span itemprop="isbn"> ' .	$isbn['paperback'] . '</span></span> ';
 						endif;
-
+				
 						if( $isbn['hardback']):
-							echo '<span class="isbn"><strong>Hb</strong> ISBN: ' .	$isbn['hardback'] . '</span> ';
+							echo '<span class="isbn"><strong>Hb</strong> ISBN:<span itemprop="isbn"> ' .	$isbn['hardback'] . '</span></span> ';
 						endif;
-
+				
 						if( $isbn['ebook']):
-							echo '<span class="isbn"><strong>E</strong> ISBN: ' .	$isbn['ebook'] . '</span> ';
+							echo '<span class="isbn"><strong>E</strong> ISBN:<span itemprop="isbn"> ' .	$isbn['ebook'] . '</span></span> ';
 						endif;
-
+				
 						echo '</div>';
-
+				
 					endif;
 
 					echo '</div>';
 
 					echo '</div>';
-
-
-			endif;
 
 			the_content();
 
@@ -167,13 +114,13 @@
 				$author = get_sub_field('quote_author');
 
 						// Load sub field value.
-						echo '<figure class="quote">';
+						echo '<figure class="quote" itemprop="review" itemscope itemtype="https://schema.org/Review">';
 						if($text):
-							echo '<blockquote>' . $text . '</blockquote>';
+							echo '<blockquote itemprop="reviewBody">' . $text . '</blockquote>';
 						endif;
 
 						if($author):
-							echo '<figcaption>' . $author . '</figcaption>';
+							echo '<figcaption itemprop="author">' . $author . '</figcaption>';
 						endif;
 						
 						// Do something...
@@ -187,7 +134,7 @@
 			endif;
 
 			if( $pubLink ): 
-				echo '<div class="article-link"><a href="' . $pubLink . '">View Publication</a></div>';
+				echo '<div class="article-link"><a itemprop="sameAs" href="' . $pubLink . '">View Publication</a></div>';
 			endif;
 
 			// Check rows exists.

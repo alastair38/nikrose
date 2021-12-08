@@ -170,8 +170,8 @@ function accessible_thumbnail($class=null) {
 }
 
 function custom_post_archive($query) {
-    if (!is_admin() && is_tax('publications_categories') && $query->is_tax)
-        $query->set( 'post_type', array('publications') );
+    if (!is_admin() && is_tax('articles_categories') && $query->is_tax)
+        $query->set( 'post_type', array('articles') );
     remove_action( 'pre_get_posts', 'custom_post_archive' );
 }
 add_action('pre_get_posts', 'custom_post_archive');
@@ -197,15 +197,15 @@ function query_post_type($query) {
     }
 }
 
-add_filter( 'post_type_labels_post', 'change_post_labels' );
+// add_filter( 'post_type_labels_post', 'change_post_labels' );
 
-function change_post_labels( $args ) {
-        foreach( $args as $key => $label ){
-            $args->{$key} = str_replace( [ __( 'Posts' ), __( 'Post' ) ], __( 'Archive' ), $label );
-        }
+// function change_post_labels( $args ) {
+//         foreach( $args as $key => $label ){
+//             $args->{$key} = str_replace( [ __( 'Posts' ), __( 'Post' ) ], __( 'News & Media' ), $label );
+//         }
 
-        return $args;
-}
+//         return $args;
+// }
 
 function acbase_admin_bar_remove_logo() {
     global $wp_admin_bar;

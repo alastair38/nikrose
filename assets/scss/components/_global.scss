@@ -27,6 +27,10 @@ textarea {
   font-family: $font-stack;
 }
 
+span.block {
+  display: block;
+}
+
 nav ul {
   &:not(.browser-default) {
     padding-left: 0;
@@ -146,12 +150,22 @@ a {
 
 //  Blockquote
 
-blockquote {
+figure.quote {
   background: color('grey', 'lighten-4');
   margin: 2rem 0;
-  padding: 2rem;
+  padding: 2.75rem;
+  border-radius: 4px;
   position: relative;
   z-index: 1;
+  blockquote,
+  figcaption {
+    width: 80%;
+    margin: auto;
+  }
+  figcaption {
+    font-style: italic;
+    margin-top: 1rem;
+  }
   cite {
     font-size: 0.85rem;
     font-weight: 600;
@@ -180,6 +194,26 @@ blockquote {
   }
 }
 
+// Video wrapper
+
+figure.video-wrapper {
+  background: color('grey', 'lighten-4');
+  margin: 3rem 0 0 0;
+  padding: 2rem;
+  border-radius: 4px;
+  height: auto;
+  aspect-ratio: 640/360;
+  iframe {
+    border-radius: 4px;
+    display: flex;
+    margin: auto;
+  }
+  figcaption {
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
 // Icon Styles
 
 .icon {
@@ -187,11 +221,11 @@ blockquote {
 
   &.left {
     float: left;
-    margin-right: 15px;
+    margin-right: 0.5rem;
   }
   &.right {
     float: right;
-    margin-left: 15px;
+    margin-left: 0.5rem;
   }
   &.tiny {
     font-size: 1rem;
@@ -273,53 +307,15 @@ figure.hero {
     border-radius: 4px;
   }
   figcaption {
-    padding: 0.5rem 1rem;
+    padding: 0rem 1rem;
     font-size: 0.8rem;
     text-align: center;
     font-style: italic;
   }
 }
 
-.single figure {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 1rem 1rem 0;
-  float: left;
-  @media #{$small-and-down} {
-    float: none;
-    margin-right: 0;
-  }
-  img {
-    max-width: 100%;
-    object-fit: cover;
-    border-radius: 4px;
-    @media #{$small-and-down} {
-      width: 100%;
-    }
-  }
-  figcaption {
-    padding: 0.5rem 1rem;
-    font-size: 0.8rem;
-    text-align: center;
-    font-style: italic;
-  }
-  &.grid-fig {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-gap: 0rem;
-
-    @media #{$medium-and-up} {
-      grid-gap: 1rem;
-    }
-    figcaption {
-      @media #{$medium-and-up} {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-    }
-  }
+.is-style-rounded figure img {
+  aspect-ratio: 1;
 }
 
 .entry-content .wp-block-image figure {
@@ -573,10 +569,6 @@ ul.staggered-list li {
 
 // Footer
 .page-footer {
-  #inner-footer {
-    padding-top: 20px;
-  }
-
   .footer-copyright {
     overflow: hidden;
     min-height: 50px;

@@ -13,6 +13,21 @@
 					</header>
 
 					<div class="entry-content archive-<?php echo get_post_type(); ?>">
+					<?php 
+					$lectDesc = get_field("lectures_page_description", "options");
+					$projDesc = get_field("projects_page_description", "options");
+					$pubDesc = get_field("publications_page_description", "options");
+					$booksDesc = get_field("books_page_description", "options");
+					if(is_post_type_archive( 'articles' )) {
+							echo '<div class="entry-content archive-desc">' . $pubDesc . '</div>';
+						} else if (is_post_type_archive( 'projects' )) {
+							echo '<div class="entry-content archive-desc">' . $projDesc . '</div>';
+						} else if (is_post_type_archive( 'lectures' )) {
+							echo '<div class="entry-content archive-desc">' . $lectDesc . '</div>';
+						} else if (is_post_type_archive( 'books' )) {
+							echo '<div class="entry-content archive-desc">' . $booksDesc . '</div>';
+						}
+					?>
 
 			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 

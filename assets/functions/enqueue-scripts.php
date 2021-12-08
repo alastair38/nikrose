@@ -45,7 +45,7 @@ function site_scripts() {
     wp_enqueue_style( 'icons-style', 'https://fonts.googleapis.com/icon?family=Material+Icons', array(), '', 'all' );
 
     // Register main stylesheet
-    wp_enqueue_style( 'fonts-style', 'https://fonts.googleapis.com/css?family=Lato:100,300,400|Gruppo&display=swap', array(), '', 'all' );
+    wp_enqueue_style( 'fonts-style', 'https://fonts.googleapis.com/css?family=Lato:100,300,400|Comfortaa:wght@700&display=swap', array(), '', 'all' );
 
     if (is_front_page()) {
       wp_enqueue_style( 'slick-main', 'https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.css', array(), '', 'all' );

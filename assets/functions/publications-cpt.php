@@ -4,21 +4,21 @@
  * Publications CPT for general support publications
  */
 
-function ac_base_publications() {
+function ac_base_articles() {
   // creating (registering) the custom type
-  register_post_type( 'publications', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
+  register_post_type( 'articles', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
     // let's now add all the options for this post type
     array('labels' => array(
-      'name' => __('Publications', 'ac_base'), /* This is the Title of the Group */
-      'singular_name' => __('Publication', 'ac_base'), /* This is the individual type */
-      'all_items' => __('All Publications', 'ac_base'), /* the all items menu item */
-      'add_new' => __('Add New Publication', 'ac_base'), /* The add new menu item */
-      'add_new_item' => __('Add New Publication', 'ac_base'), /* Add New Display Title */
+      'name' => __('Articles', 'ac_base'), /* This is the Title of the Group */
+      'singular_name' => __('Article', 'ac_base'), /* This is the individual type */
+      'all_items' => __('All articles', 'ac_base'), /* the all items menu item */
+      'add_new' => __('Add new article', 'ac_base'), /* The add new menu item */
+      'add_new_item' => __('Add new article', 'ac_base'), /* Add New Display Title */
       'edit' => __( 'Edit', 'ac_base' ), /* Edit Dialog */
-      'edit_item' => __('Edit Publication', 'ac_base'), /* Edit Display Title */
-      'new_item' => __('New Publication', 'ac_base'), /* New Display Title */
-      'view_item' => __('View Publication', 'ac_base'), /* View Display Title */
-      'search_items' => __('Search Publications', 'ac_base'), /* Search Custom Type Title */
+      'edit_item' => __('Edit article', 'ac_base'), /* Edit Display Title */
+      'new_item' => __('New article', 'ac_base'), /* New Display Title */
+      'view_item' => __('View article', 'ac_base'), /* View Display Title */
+      'search_items' => __('Search articles', 'ac_base'), /* Search Custom Type Title */
       'not_found' =>  __('Nothing found in the Database.', 'ac_base'), /* This displays if there are no entries yet */
       'not_found_in_trash' => __('Nothing found in Trash', 'ac_base'), /* This displays if there is nothing in the trash */
       'parent_item_colon' => ''
@@ -32,49 +32,49 @@ function ac_base_publications() {
       'menu_position' => 4, /* this is what order you want it to appear in on the left hand side menu */
       'menu_icon' => 'dashicons-media-document', /* the icon for the custom post type menu */
       'has_archive' => true, /* you can rename the slug here */
-      'rewrite'     => ['slug' => 'publications'],
+      'rewrite'     => ['slug' => 'articles'],
       'with_front' => false,
       'capability_type' => 'page',
       'hierarchical' => false,
       /* the next one is important, it tells what's enabled in the post editor */
       'supports' => array( 'title', 'editor'),
-      'taxonomies'          => array('publications_categories'),
+      'taxonomies'          => array('articles_categories'),
     ) /* end of options */
   ); /* end of register post type */
 
 }
 
-add_action( 'init', 'ac_base_publications');
+add_action( 'init', 'ac_base_articles');
 
-//hook into the init action and call create_publications_categories_taxonomy when it fires
+//hook into the init action and call create_articles_categories_taxonomy when it fires
 
-add_action( 'init', 'create_publications_categories_taxonomy', 0 );
+add_action( 'init', 'create_articles_categories_taxonomy', 0 );
 
-function create_publications_categories_taxonomy() {
+function create_articles_categories_taxonomy() {
 
 // Labels part for the GUI
 
   $labels = array(
-    'name' => _x( 'Publication Categories', 'taxonomy general name' ),
-    'singular_name' => _x( 'Publication Category', 'taxonomy singular name' ),
-    'search_items' =>  __( 'Search Publication Categories' ),
-    'popular_items' => __( 'Popular Publication Categories' ),
-    'all_items' => __( 'All Publication Categories' ),
+    'name' => _x( 'Article Categories', 'taxonomy general name' ),
+    'singular_name' => _x( 'Article Category', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search article categories' ),
+    'popular_items' => __( 'Popular article categories' ),
+    'all_items' => __( 'All article categories' ),
     'parent_item' => null,
     'parent_item_colon' => null,
-    'edit_item' => __( 'Edit Publication Category' ),
-    'update_item' => __( 'Update Publication Category' ),
-    'add_new_item' => __( 'Add New Publication Category' ),
-    'new_item_name' => __( 'New Publication Category Name' ),
-    'separate_items_with_commas' => __( 'Separate publications categories with commas' ),
-    'add_or_remove_items' => __( 'Add or remove publications categories' ),
-    'choose_from_most_used' => __( 'Choose from the most used publications categories' ),
-    'menu_name' => __( 'Publication Categories' ),
+    'edit_item' => __( 'Edit article category' ),
+    'update_item' => __( 'Update article category' ),
+    'add_new_item' => __( 'Add New article category' ),
+    'new_item_name' => __( 'New article category Name' ),
+    'separate_items_with_commas' => __( 'Separate articles categories with commas' ),
+    'add_or_remove_items' => __( 'Add or remove articles categories' ),
+    'choose_from_most_used' => __( 'Choose from the most used articles categories' ),
+    'menu_name' => __( 'Article Categories' ),
   );
 
 // Now register the non-hierarchical taxonomy like tag
 
-  register_taxonomy('publications_categories','publications', array(
+  register_taxonomy('articles_categories','articles', array(
     'hierarchical' => true,
     'labels' => $labels,
     'show_ui' => true,
@@ -84,6 +84,6 @@ function create_publications_categories_taxonomy() {
     'publicly_queryable' => true,
     'update_count_callback' => '_update_post_term_count',
     'query_var' => true,
-    'rewrite' => array( 'slug' => 'publications/type' ),
+    'rewrite' => array( 'slug' => 'articles/type' ),
   ));
 }

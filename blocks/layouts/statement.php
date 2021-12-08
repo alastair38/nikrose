@@ -26,25 +26,32 @@ if( !empty($block['align']) ) {
 
 // Load values and assing defaults.
 $statement = get_field('statement_header');
-$byline = get_field('statement_byline');
-$byline = explode(" ", $byline);
+$text = get_field('statement_text');
+$link = get_field('statement_link');
+
 $bg_image = get_field('statement_background');
 ?>
 
-<div id="<?php echo $id;?>" class="row block statement"
-<?php if($bg_image) {?>
-  style='background-image: url("<?php echo $bg_image;?>");'
-<?php }?>>
+<div id="<?php echo $id;?>" class="row block statement">
+
 
 <?php if($statement){?>
   <div class="heading-wrapper">
-      <h1 class="display-type"><?php echo $statement;?></h1>
-      <ul class="statement-byline">
-        <?php foreach($byline as $word) {
-        echo '<li>' . $word . '</li>';
-        } ?>
-      </ul>
+  <?php if($bg_image) {?>
+  <img src="<?php echo $bg_image['url'];?>" alt="<?php echo $bg_image['alt'];?>" width="300" height="300"/>
+<?php }?>
+<div class="statement-text">
+  <h1 class="display-type"><?php echo $statement;?></h1>
+      <?php if($text) {?>
+  <p><?php echo $text;?></p>
+<?php }?>
+<?php if($link) {?>
+  <a href="<?php echo $link;?>">Read Nik's full biography</a>
+<?php }?>
+
+</div>
+      
   </div>
 <?php }?>
-  
+
 </div>
