@@ -27,7 +27,12 @@
 						} else if (is_post_type_archive( 'books' )) {
 							echo '<div class="entry-content archive-desc">' . $booksDesc . '</div>';
 						}
+						
 					?>
+					<div class="search-wrapper">
+						<?php get_search_form();?>
+					</div>
+					
 
 			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -40,7 +45,7 @@
 
 				<?php else : ?>
 
-					<?php get_template_part( 'parts/content', 'missing' ); ?>
+					<?php // get_template_part( 'parts/content', 'missing' ); ?>
 
 				<?php endif; ?>
 				</div>

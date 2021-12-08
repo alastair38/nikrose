@@ -63,7 +63,7 @@ require_once(get_template_directory().'/assets/functions/books-cpt.php');
 function include_cpt_search( $query ) {
 
     if ( $query->is_search && !is_admin() ) { // added !is_admin() so admin filters don't break
-		$query->set( 'post_type', array( 'post', 'page', 'projects', 'articles', 'news', 'lectures' ) );
+		$query->set( 'post_type', array( 'post', 'page', 'books', 'projects', 'articles', 'news', 'lectures' ) );
     }
 
     return $query;

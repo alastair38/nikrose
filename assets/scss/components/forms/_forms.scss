@@ -10,60 +10,67 @@ button:focus {
 
 label {
   font-size: $label-font-size;
-  color: color('grey', 'darken-3');;
+  color: color('grey', 'darken-3');
 }
 
-#main-form {
-  display: block;
-  background: color('grey', 'lighten-4');
-  padding: 3rem;
-  margin-bottom: 5rem;
-  #search-input {
-    display: flex;
-    background: $neutral-light;
-    border: 1px solid color('grey', 'lighten-1');
+#search-input {
+  display: flex;
+  gap: 1rem;
+  background: $neutral-light;
+  border: 1px solid color('grey', 'lighten-1');
+  align-items: center;
+  padding: 1rem 1.75rem;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+  input[type='submit'] {
+    background: $accent-color;
+    border-radius: 30px;
+    padding: 0.25rem 0.75rem;
+    display: inline-flex;
     align-items: center;
-    padding: 0 .75rem;
-    border-radius: 3px;
-    input[type='submit'] {
-      background: $accent-color;
-      &:focus, &:hover {
-        background: color('green', 'base');
-        color: $neutral-light;
-      }
+    transition: 350ms;
+    border: 2px solid transparent;
+    cursor: pointer;
+    &:focus,
+    &:hover {
+      background: color('grey', 'darken-2');
+      color: $neutral-light;
+      border-color: $neutral-dark;
     }
-    input[type='search'] {
+  }
+  input[type='search'] {
+    border-bottom: none;
+    margin: 0;
+    height: 4rem;
+    &:focus {
       border-bottom: none;
-      margin: 0;
-      height: 4rem;
-      &:focus {
-        border-bottom: none;
-        box-shadow: none;
-      }
-      &:focus + input {
-        background: color('green', 'base');
-        color: $neutral-light;
-      }
+      box-shadow: none;
+    }
+    &:focus + input {
+      background: color('grey', 'darken-2');
+      color: $neutral-light;
+      border-color: $neutral-dark;
     }
   }
 }
 
 .wpforms-container.wpforms-container-full {
-    display: inline-block;
-    background: color('grey', 'lighten-4');
-    width: 100%;
-    padding: 1rem;
-    label {
-      color: $neutral-dark;
-    }
-    button[type='submit'].wpforms-submit {
-      background: $accent-color;
+  display: inline-block;
+  background: color('grey', 'lighten-4');
+  width: 100%;
+  padding: 1rem;
+  label {
+    color: $neutral-dark;
+  }
+  button[type='submit'].wpforms-submit {
+    background: $accent-color;
+    color: $neutral-light;
+    &:hover,
+    &:focus {
+      background: color('green', 'base');
       color: $neutral-light;
-      &:hover, &:focus {
-        background: color('green', 'base');
-        color: $neutral-light;
-      }
     }
+  }
 }
 
 @import 'input-fields';

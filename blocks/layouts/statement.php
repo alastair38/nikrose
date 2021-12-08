@@ -46,7 +46,7 @@ $bg_image = get_field('statement_background');
   <p><?php echo $text;?></p>
 <?php }?>
 <?php if($link) {?>
-  <a href="<?php echo $link;?>">Read Nik's full biography</a>
+  <a href="<?php echo $link;?>">Read Nikolas' full biography</a>
 <?php }?>
 
 </div>

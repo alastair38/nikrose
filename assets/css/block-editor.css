@@ -2216,7 +2216,8 @@ figure.hero {
   font-style: italic; }
 
 .is-style-rounded figure img {
-  aspect-ratio: 1; }
+  aspect-ratio: 1;
+  height: 202px; }
 
 .entry-content .wp-block-image figure {
   border: none;
@@ -2973,9 +2974,6 @@ main.container {
   background: #fafafa;
   padding: 0.25rem 1.25rem;
   border-radius: 3px; }
-
-.archive-desc {
-  padding-bottom: 2rem; }
 
 .search-header {
   padding: 0; }

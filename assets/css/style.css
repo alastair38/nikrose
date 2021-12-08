@@ -2216,7 +2216,8 @@ figure.hero {
   font-style: italic; }
 
 .is-style-rounded figure img {
-  aspect-ratio: 1; }
+  aspect-ratio: 1;
+  height: 202px; }
 
 .entry-content .wp-block-image figure {
   border: none;
@@ -2974,9 +2975,6 @@ main.container {
   background: #fafafa;
   padding: 0.25rem 1.25rem;
   border-radius: 3px; }
-
-.archive-desc {
-  padding-bottom: 2rem; }
 
 .search-header {
   padding: 0; }
@@ -5605,33 +5603,39 @@ label {
   font-size: 0.8rem;
   color: #424242; }
 
-#main-form {
-  display: block;
-  background: #f5f5f5;
-  padding: 3rem;
-  margin-bottom: 5rem; }
-  #main-form #search-input {
-    display: flex;
-    background: #ffffff;
-    border: 1px solid #bdbdbd;
+#search-input {
+  display: flex;
+  gap: 1rem;
+  background: #ffffff;
+  border: 1px solid #bdbdbd;
+  align-items: center;
+  padding: 1rem 1.75rem;
+  border-radius: 4px;
+  margin-bottom: 2rem; }
+  #search-input input[type='submit'] {
+    background: #cc9fd5;
+    border-radius: 30px;
+    padding: 0.25rem 0.75rem;
+    display: inline-flex;
     align-items: center;
-    padding: 0 .75rem;
-    border-radius: 3px; }
-    #main-form #search-input input[type='submit'] {
-      background: #cc9fd5; }
-      #main-form #search-input input[type='submit']:focus, #main-form #search-input input[type='submit']:hover {
-        background: #4CAF50;
-        color: #ffffff; }
-    #main-form #search-input input[type='search'] {
+    transition: 350ms;
+    border: 2px solid transparent;
+    cursor: pointer; }
+    #search-input input[type='submit']:focus, #search-input input[type='submit']:hover {
+      background: #616161;
+      color: #ffffff;
+      border-color: #212121; }
+  #search-input input[type='search'] {
+    border-bottom: none;
+    margin: 0;
+    height: 4rem; }
+    #search-input input[type='search']:focus {
       border-bottom: none;
-      margin: 0;
-      height: 4rem; }
-      #main-form #search-input input[type='search']:focus {
-        border-bottom: none;
-        box-shadow: none; }
-      #main-form #search-input input[type='search']:focus + input {
-        background: #4CAF50;
-        color: #ffffff; }
+      box-shadow: none; }
+    #search-input input[type='search']:focus + input {
+      background: #616161;
+      color: #ffffff;
+      border-color: #212121; }
 
 .wpforms-container.wpforms-container-full {
   display: inline-block;

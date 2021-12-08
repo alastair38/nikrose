@@ -17,7 +17,20 @@
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 					<!-- To see additional archive styles, visit the /parts directory -->
-					<?php get_template_part( 'parts/loop', 'search' ); ?>
+
+					<?php
+	$post_type = get_post_type();
+	$post_type_obj = get_post_type_object($post_type);
+	if($post_type === 'books') {
+		get_template_part( 'parts/loop', 'books' );
+	} elseif ($post_type === 'articles') {
+		get_template_part( 'parts/loop', 'articles' );
+	} elseif ($post_type === 'lectures') {
+		get_template_part( 'parts/loop', 'lectures' );
+	} else {
+		get_template_part( 'parts/loop', 'search' );
+	};?>
+				
 
 				<?php endwhile; ?>
 
