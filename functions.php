@@ -46,19 +46,19 @@ require_once(get_template_directory().'/assets/functions/login.php');
 // Customize the WordPress admin
 require_once(get_template_directory().'/assets/functions/admin.php');
 
-require_once(get_template_directory().'/assets/functions/blocks.php');
+// require_once(get_template_directory().'/assets/functions/blocks.php');
 
 //$publications = get_field('enable_publications', 'option');
 
-require_once(get_template_directory().'/assets/functions/projects-cpt.php');
+// require_once(get_template_directory().'/assets/functions/projects-cpt.php');
 
-require_once(get_template_directory().'/assets/functions/publications-cpt.php');
+// require_once(get_template_directory().'/assets/functions/publications-cpt.php');
 
-require_once(get_template_directory().'/assets/functions/lectures-cpt.php');
+// require_once(get_template_directory().'/assets/functions/lectures-cpt.php');
 
-require_once(get_template_directory().'/assets/functions/news-cpt.php');
+// require_once(get_template_directory().'/assets/functions/news-cpt.php');
 
-require_once(get_template_directory().'/assets/functions/books-cpt.php');
+// require_once(get_template_directory().'/assets/functions/books-cpt.php');
 
 function include_cpt_search( $query ) {
 

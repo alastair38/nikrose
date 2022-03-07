@@ -364,7 +364,9 @@ figure.right {
 // Pagination
 
 ul.pagination {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
   li {
     display: inline-flex;
     align-items: center;
