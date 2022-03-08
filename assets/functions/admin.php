@@ -132,30 +132,17 @@ if( function_exists('acf_add_options_page') ) {
 	// 	'update_button' => __('Update Privacy Settings', 'acf'),
 	// ));
 
-	acf_add_options_page(array(
-		'page_title' 	=> 'SEO Settings',
-		'menu_title'	=> 'SEO',
-		'menu_slug' 	=> 'theme-SEO-settings',
-		'capability'	=> 'edit_posts',
-		'redirect'		=> false,
-		'icon_url' => 'dashicons-megaphone',
-		'update_button' => __('Update SEO Settings', 'acf'),
-	));
+	// acf_add_options_page(array(
+	// 	'page_title' 	=> 'SEO Settings',
+	// 	'menu_title'	=> 'SEO',
+	// 	'menu_slug' 	=> 'theme-SEO-settings',
+	// 	'capability'	=> 'edit_posts',
+	// 	'redirect'		=> false,
+	// 	'icon_url' => 'dashicons-megaphone',
+	// 	'update_button' => __('Update SEO Settings', 'acf'),
+	// ));
 
 }
-
-function gut_block_category( $categories, $post ) {
-	return array_merge(
-		$categories,
-		array(
-			array(
-				'slug' => 'custom-blocks',
-				'title' => __( 'Custom Blocks', 'custom-blocks' ),
-			),
-		)
-	);
-}
-add_filter( 'block_categories', 'gut_block_category', 10, 2);
 
 function remove_logo() { ?>
 <style type="text/css">

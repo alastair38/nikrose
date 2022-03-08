@@ -61,9 +61,24 @@ require_once(get_template_directory().'/assets/functions/admin.php');
 // require_once(get_template_directory().'/assets/functions/books-cpt.php');
 
 function include_cpt_search( $query ) {
+  $args = array(
+    'public'   => true,   
+  );
+
+  $types = [];
+  
+  $post_types = get_post_types( $args); // get all public post types
+   
+  if ( $post_types ) {
+      foreach ( $post_types  as $post_type ) { // loop through and add post type names to an array
+          if($post_type != 'attachment') {
+            array_push($types, $post_type);
+          } 
+      }
+  }
 
     if ( $query->is_search && !is_admin() ) { // added !is_admin() so admin filters don't break
-		$query->set( 'post_type', array( 'post', 'page', 'books', 'projects', 'articles', 'news', 'lectures' ) );
+		$query->set( 'post_type', $types); // include the post types array in the search query
     }
 
     return $query;
