@@ -2094,7 +2094,8 @@ a {
 figure.quote {
   background: #f5f5f5;
   margin: 2rem 0;
-  padding: 2.75rem;
+  padding-block: 1.5rem;
+  padding-inline: 0.5rem;
   border-radius: 4px;
   position: relative;
   z-index: 1; }
@@ -2115,7 +2116,7 @@ figure.quote {
     font-size: 6rem;
     position: absolute;
     color: rgba(0, 0, 0, 0.03);
-    left: 0;
+    left: -1.5rem;
     top: 0;
     transform: rotate(180deg);
     z-index: -1; }
@@ -2125,7 +2126,7 @@ figure.quote {
     font-size: 6rem;
     position: absolute;
     color: rgba(0, 0, 0, 0.03);
-    right: 0;
+    right: -1.5rem;
     bottom: 0;
     z-index: -1; }
 
@@ -2815,20 +2816,28 @@ main.container {
           transition: 350ms; }
 
 .row.block.featured-book {
-  padding: 0rem 10%; }
+  padding: 0rem 5%; }
   @media only screen and (max-width: 600px) {
     .row.block.featured-book {
       padding: 0; } }
   .row.block.featured-book .book-block-details {
     display: flex;
     align-items: center;
-    gap: 2rem; }
+    gap: 1.5rem;
+    padding: 1.5rem; }
+    .row.block.featured-book .book-block-details .book-block-content {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem; }
+      @media only screen and (max-width: 992px) {
+        .row.block.featured-book .book-block-details .book-block-content {
+          flex-direction: column;
+          gap: 0; } }
     .row.block.featured-book .book-block-details img {
       border-radius: 50%; }
     .row.block.featured-book .book-block-details figure h2 {
       width: 80%;
       margin: auto;
-      font-size: 1.25rem;
       font-weight: 600;
       margin-bottom: 1rem; }
 
@@ -2984,18 +2993,62 @@ main.container {
 .entry-content.archive-post,
 .entry-content.archive-projects {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1rem; }
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.5rem; }
+  .entry-content.archive-workshops .archive-desc,
+  .entry-content.archive-workshops .search-wrapper,
+  .entry-content.archive-post .archive-desc,
+  .entry-content.archive-post .search-wrapper,
+  .entry-content.archive-projects .archive-desc,
+  .entry-content.archive-projects .search-wrapper {
+    grid-column: 1 / -1; }
   .entry-content.archive-workshops article,
   .entry-content.archive-post article,
   .entry-content.archive-projects article {
     display: flex; }
+  .entry-content.archive-workshops .projects-grid,
+  .entry-content.archive-post .projects-grid,
+  .entry-content.archive-projects .projects-grid {
+    border-radius: 4px;
+    overflow: hidden; }
+    .entry-content.archive-workshops .projects-grid img,
+    .entry-content.archive-post .projects-grid img,
+    .entry-content.archive-projects .projects-grid img {
+      width: 100%;
+      max-height: 250px;
+      aspect-ratio: 2 / 3;
+      object-fit: cover; }
+    .entry-content.archive-workshops .projects-grid .content,
+    .entry-content.archive-post .projects-grid .content,
+    .entry-content.archive-projects .projects-grid .content {
+      padding: 1.5rem; }
+      .entry-content.archive-workshops .projects-grid .content h2,
+      .entry-content.archive-post .projects-grid .content h2,
+      .entry-content.archive-projects .projects-grid .content h2 {
+        margin-top: 0; }
+      .entry-content.archive-workshops .projects-grid .content a,
+      .entry-content.archive-post .projects-grid .content a,
+      .entry-content.archive-projects .projects-grid .content a {
+        color: #212121;
+        background: #cc9fd5;
+        border-radius: 30px;
+        padding: 0.25rem 0.75rem;
+        display: inline-flex;
+        align-items: center;
+        transition: 350ms;
+        text-decoration: none;
+        border: 3px solid #cc9fd5; }
+        .entry-content.archive-workshops .projects-grid .content a:hover, .entry-content.archive-workshops .projects-grid .content a:focus,
+        .entry-content.archive-post .projects-grid .content a:hover,
+        .entry-content.archive-post .projects-grid .content a:focus,
+        .entry-content.archive-projects .projects-grid .content a:hover,
+        .entry-content.archive-projects .projects-grid .content a:focus {
+          background: #a658b6; }
   @media only screen and (max-width: 600px) {
     .entry-content.archive-workshops,
     .entry-content.archive-post,
     .entry-content.archive-projects {
-      grid-template-columns: 1fr;
-      grid-gap: 0rem; } }
+      grid-template-columns: 1fr; } }
 
 .block.workstreams .container {
   display: grid;

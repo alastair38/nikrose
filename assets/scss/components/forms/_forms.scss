@@ -29,13 +29,11 @@ label {
     display: inline-flex;
     align-items: center;
     transition: 350ms;
-    border: 2px solid transparent;
+    border: 3px solid $accent-color;
     cursor: pointer;
     &:focus,
     &:hover {
-      background: color('grey', 'darken-2');
-      color: $neutral-light;
-      border-color: $neutral-dark;
+      background: $accent-color-hover;
     }
   }
   input[type='search'] {

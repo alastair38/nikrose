@@ -153,7 +153,8 @@ a {
 figure.quote {
   background: color('grey', 'lighten-4');
   margin: 2rem 0;
-  padding: 2.75rem;
+  padding-block: 1.5rem;
+  padding-inline: 0.5rem;
   border-radius: 4px;
   position: relative;
   z-index: 1;
@@ -177,7 +178,7 @@ figure.quote {
     font-size: 6rem;
     position: absolute;
     color: rgba(0, 0, 0, 0.03);
-    left: 0;
+    left: -1.5rem;
     top: 0;
     transform: rotate(180deg);
     z-index: -1;
@@ -188,7 +189,7 @@ figure.quote {
     font-size: 6rem;
     position: absolute;
     color: rgba(0, 0, 0, 0.03);
-    right: 0;
+    right: -1.5rem;
     bottom: 0;
     z-index: -1;
   }

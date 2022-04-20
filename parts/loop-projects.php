@@ -1,6 +1,6 @@
 <article>
 
-<div class="feat">
+<div class="projects-grid z-depth-1">
 <?php
 
 $excerpt = get_the_excerpt();
@@ -15,11 +15,12 @@ echo '<img src="' . $image['url'] . '" width="'. $image['sizes']['blog-thumbnail
 
 }?>
 
-<div class="feat-content">
-  <h3><a href="<?php the_permalink($post->ID) ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+<div class="content">
+  <h2 class="h4"><?php the_title(); ?></h2>
   <?php if($excerpt){?>
-	<span><?php echo $excerpt; ?></span>
+	<p><?php echo $excerpt; ?></p>
   <?php } ?>
+  <a aria-label="Read more about <?php the_title(); ?>" href="<?php the_permalink($post->ID) ?>" rel="bookmark">Read more</a>
 </div>
 
 </div>
