@@ -9,8 +9,6 @@ function site_scripts() {
 	// Load jQuery files in header - load in header to avoid issues with plugins
   wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), '', false );
 
-
-
     // Load What-Input files in footer
     //wp_enqueue_script( 'what-input', get_template_directory_uri() . '/vendor/what-input/what-input.min.js', array(), '', true );
 
@@ -39,9 +37,6 @@ function site_scripts() {
     }
     // Register Slick stylesheet
 
-
-
-
     wp_enqueue_style( 'icons-style', 'https://fonts.googleapis.com/icon?family=Material+Icons', array(), '', 'all' );
 
     // Register main stylesheet
@@ -56,12 +51,9 @@ function site_scripts() {
     // Register main stylesheet
     wp_enqueue_style( 'site-style', get_template_directory_uri() . '/assets/css/style.css', array(), $theme_version, 'all' );
 
-
     // Deregister admin stylesheet so that it doesn't load on the front-end form
 
     wp_deregister_style( 'wp-admin' );
-
-
 
     // Comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
@@ -69,7 +61,3 @@ function site_scripts() {
     }
 }
 add_action('wp_enqueue_scripts', 'site_scripts', 999);
-
-/**
- * Register and enqueue a custom stylesheet in the WordPress admin.
- *

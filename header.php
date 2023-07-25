@@ -43,7 +43,7 @@
       } else {
         $excerpt = wp_trim_words(get_the_content($page_id), 30);
       }
-      if(!$post_thumbnail) {
+      if(!isset($post_thumbnail)) {
         $post_thumbnail = get_field("og_image", "options");
         $post_thumbnail = $post_thumbnail['url'];
         $alt = $post_thumbnail['alt'];

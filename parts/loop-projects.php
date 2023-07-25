@@ -11,8 +11,9 @@ echo get_the_post_thumbnail($post->ID, array(600, 600) );
 $image = get_field("default_image", "options");
 //var_dump($image);
 //print_r($image);
+if(isset($image)):
 echo '<img src="' . $image['url'] . '" width="'. $image['sizes']['blog-thumbnail size-width'] . '" height="' . $image['sizes']['blog-thumbnail size-height'] . '" />';
-
+endif;
 }?>
 
 <div class="content">
