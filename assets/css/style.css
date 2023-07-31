@@ -5487,19 +5487,25 @@ a svg {
 }
 
 .feat {
-  border-radius: 3px;
+  border-radius: 6px;
+  padding-block: 1rem;
+  position: relative;
   line-height: 0;
   background: #ffffff;
   margin-bottom: 1rem;
+  border: 1px solid #e0e0e0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 .feat a {
-  border-radius: 30px;
-  padding: 0.25rem 0.75rem;
-  display: inline-flex;
-  align-items: center;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 1rem;
   text-decoration: none;
   transition: 350ms;
-  border: 2px solid;
 }
 .feat a:hover,
 .feat a:focus {
