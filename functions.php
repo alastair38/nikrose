@@ -94,6 +94,17 @@ function ac_author_base() {
 }
 
 
+add_filter( 'pre_get_posts', 'top_level_projects' );
+    
+function top_level_projects( $query ) {
+    //If the user is viewing the frontend, the page is an archive and post_parent is not set and post_type is the post type in question
+    if ( ! is_admin() && is_archive() && false == $query->query_vars['post_parent'] &&  $query->query_vars['post_type'] === 'projects')
+        //set post_parent to 0, which is the default post_parent for top level posts
+        $query->set( 'post_parent', 0 );
+    return $query;
+}
+
+
 add_action('admin_head', 'my_custom_admin_css');
 
 function my_custom_admin_css() {
