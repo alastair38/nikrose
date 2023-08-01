@@ -59,7 +59,7 @@
 				endif;
 			
 				if( $link['Lecture_link'] ): 
-					echo '<div class="article-link"><a href="' . $link['Lecture_link'] . '">Go to ' . $link['type_of_link'] . ' (external)<svg class="icon right" aria-hidden="true"><use xlink:href="' . get_stylesheet_directory_uri() . '/assets/icons/symbol-defs.svg#icon-' . $link['type_of_link'] . '"></use></svg></a></div>';
+					echo '<div class="article-link"><a href="' . $link['Lecture_link'] . '">Go to ' . $link['type_of_link'] . '<svg class="icon right" aria-hidden="true"><use xlink:href="' . get_stylesheet_directory_uri() . '/assets/icons/symbol-defs.svg#icon-' . $link['type_of_link'] . '"></use></svg></a></div>';
 				endif;
 			
 				echo '</div>';
