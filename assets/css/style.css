@@ -3553,6 +3553,9 @@ main.container {
   .container {
     width: 70%;
   }
+  .post-type-archive-projects .container {
+    width: 85%;
+  }
 }
 .col .row {
   margin-left: -0.75rem;
@@ -3886,9 +3889,14 @@ main.container {
   padding: 0;
 }
 
-.entry-content.archive-workshops,
-.entry-content.archive-post,
 .entry-content.archive-projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1.5rem;
+}
+
+.entry-content.archive-workshops,
+.entry-content.archive-post {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1.5rem;
@@ -3956,6 +3964,12 @@ main.container {
   .entry-content.archive-post,
   .entry-content.archive-projects {
     grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .entry-content.archive-projects {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
