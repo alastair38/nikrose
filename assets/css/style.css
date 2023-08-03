@@ -5488,7 +5488,7 @@ a svg {
 
 .feat {
   border-radius: 6px;
-  padding-block: 1rem;
+  overflow: hidden;
   position: relative;
   line-height: 0;
   background: #ffffff;
@@ -5519,16 +5519,15 @@ a svg {
 .feat h2,
 .feat h3 {
   font-size: 1.15rem;
-  padding-bottom: 0.25rem;
+  padding-top: 1rem;
   display: flex;
   justify-content: center;
   text-align: center;
 }
 .feat img {
-  padding: 0.5rem;
   width: 100%;
   height: 175px;
-  object-fit: contain;
+  object-fit: cover;
   aspect-ratio: 4/3;
 }
 .feat .feat-content {
