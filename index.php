@@ -19,10 +19,11 @@
 							echo '<div class="entry-content archive-desc">' . $desc . '</div>';
 						}
 					?>
-			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			    <?php if (have_posts()) : while (have_posts()) : the_post(); 
+					?>
 
 					<!-- To see additional archive styles, visit the /parts directory -->
-					<?php get_template_part( 'parts/loop', 'projects' ); ?>
+					<?php get_template_part( 'parts/loop', 'blog' ); ?>
 
 				<?php endwhile; ?>
 

@@ -105,7 +105,8 @@ add_action( 'wp_head', 'ac_base_meta_description');
 
 // theme support for gutenberg block editor styles / slimmed down version of the main stylesheet
 add_theme_support( 'editor-styles' );
-add_editor_style( 'assets/css/block-editor.css' );
+
+add_editor_style( 'assets/css/style.css' );
 
 /* end theme support */
 
