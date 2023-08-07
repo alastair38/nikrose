@@ -2626,6 +2626,11 @@ a {
   text-decoration: underline;
   transition: 350ms;
 }
+
+.entry-content h2 > a {
+  text-decoration: none;
+}
+
 .entry-content a:hover,
 .entry-content a:focus {
   color: #42a5f5;
@@ -6639,30 +6644,52 @@ a.btn-flat.primary-link .material-icons {
   margin-bottom: 4rem;
 }
 #admin-buttons .btn-flat.admin {
-  margin: 0.5rem;
   border: 1px solid currentColor;
-  background: transparent;
+  background: #333;
+  color: #ffffff;
 }
 #admin-buttons .btn-flat.admin:hover,
 #admin-buttons .btn-flat.admin:focus {
-  background: #212121;
-  color: #ffffff;
+  background: transparent;
+  color: currentColor;
 }
 #admin-buttons .btn-flat.admin.logout {
-  background: #7b1fa2;
-  color: #ffffff;
+  background: transparent;
+  color: currentColor;
   border: 1px solid currentColor;
 }
 #admin-buttons .btn-flat.admin.logout:hover,
 #admin-buttons .btn-flat.admin.logout:focus {
-  background: transparent;
-  color: currentColor;
+  background: #7b1fa2;
+  color: #ffffff;
 }
 #admin-buttons a {
-  margin-top: 0.5rem;
+  margin-block: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-inline: auto;
+  text-decoration: none;
 }
-#admin-buttons a i {
-  margin-right: 0.25rem;
+
+.add-content,
+.admin {
+  margin-block: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.add-content h2,
+.admin h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  grid-column: 1 / -1;
 }
 
 .password-reset {

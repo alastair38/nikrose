@@ -34,15 +34,27 @@ if( !is_user_logged_in() ) {
 	echo '<div class="password-reset"><a href="' . wp_lostpassword_url( ) . '" title="Lost Password">Click this link to reset your password</a></div>';
 
 } else {
-	echo '<div id="admin-buttons" class="center"><h2 class="h5">Add content</h2>';
-	echo '<a class="btn-flat admin" href="' . admin_url() . 'post-new.php?post_type=projects"><i aria-hidden="true" class="material-icons left">article</i>Add project</a>';
-	echo '<a class="btn-flat admin" href="' . admin_url() . 'post-new.php?post_type=workshops"><i aria-hidden="true" class="material-icons left">alt_route</i>Add workshop</a>';
-	echo '<a class="btn-flat admin" href="' . admin_url() . 'post-new.php?post_type=publications"><i aria-hidden="true" class="material-icons left">assignment</i>Add publication</a>';
-	echo '<h2 class="h5">Admin</h2>';
-	if(current_user_can('administrator')) {
+	echo '<div id="admin-buttons" class="center"><div class="add-content"><h2 class="h5">Add content</h2>';
+	echo '<a class="btn-flat admin" href="' . admin_url() . 'post-new.php?post_type=projects">
+	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+	Add project</a>';
+	echo '<a class="btn-flat admin" href="' . admin_url() . 'post-new.php?post_type=post">
+	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+	Add Blog Post</a>';
+	echo '<a class="btn-flat admin" href="' . admin_url() . 'post-new.php?post_type=books">
+	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+	Add Book</a>';
+	echo '<a class="btn-flat admin" href="' . admin_url() . 'post-new.php?post_type=articles">
+	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+	Add Article / Paper</a>';
+	echo '<a class="btn-flat admin" href="' . admin_url() . 'post-new.php?post_type=lectures">
+	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+	Add Lecture</a> </div>';
+	echo '<div class="admin"><h2 class="h5">Admin</h2>';
+	
 	echo '<a class="btn-flat admin" href="' . admin_url() . '"><i aria-hidden="true" class="material-icons left">settings</i>Admin area</a>';
-	}
-echo '<a class="btn-flat admin logout" href="' . home_url() . '/wp-login.php?action=logout"><i aria-hidden="true" class="material-icons left">logout</i>Logout</a>
+	
+echo '<a class="btn-flat admin logout" href="' . home_url() . '/wp-login.php?action=logout"><i aria-hidden="true" class="material-icons left">logout</i>Logout</a></div>
 	</div></div>';
 }
 
