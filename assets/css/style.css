@@ -2625,6 +2625,10 @@ a {
   position: relative;
   text-decoration: underline;
   transition: 350ms;
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: pre-line;
+  word-wrap: break-word;
 }
 
 .entry-content h2 > a {
