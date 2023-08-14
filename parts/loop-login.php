@@ -16,7 +16,7 @@
 
 		</header> <!-- end article header -->
 
-    <div class="entry-content" itemprop="articleBody">
+    <div itemprop="articleBody">
 	    <?php the_content();
 			?>
 			<?php

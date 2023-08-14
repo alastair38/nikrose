@@ -2656,6 +2656,14 @@ a {
   padding-bottom: 1rem;
 }
 
+.latest-blog {
+  padding: 4rem 1.5rem 1.5rem 1.5rem;
+}
+
+.latest-blog .wp-block-post-date {
+  padding-block: 0.5rem;
+}
+
 .valign-wrapper {
   display: flex;
   align-items: center;
