@@ -2664,6 +2664,44 @@ a {
   padding-block: 0.5rem;
 }
 
+.post-meta {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.post-meta .author {
+  font-weight: 900;
+}
+
+.post-meta .posted-on {
+  font-style: italic;
+}
+
+.blockhaus-social-share ul {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style-type: none;
+}
+
+.blockhaus-social-share ul a {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  transition: 250ms;
+}
+
+.blockhaus-social-share a:hover,
+.blockhaus-social-share a:focus {
+  opacity: 0.75;
+}
+
+.blockhaus-social-share ul svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .valign-wrapper {
   display: flex;
   align-items: center;
